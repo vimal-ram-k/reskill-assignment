@@ -1,0 +1,13 @@
+
+.cart-badge{
+    position: relative;
+}
+
+.badge{
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 50%;
+    transform: translate(-10px ,9px);
+}
