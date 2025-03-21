@@ -15,8 +15,10 @@ export const NavigationBar = (props : {onCallback : (text : string) => void}) =>
 
             <section className="right-container">
                 <div className="search-section">
-                <img src={searchicon} className="searchicon" alt="" width={30} height={30} />
-                <input type="text" className="searchbar" onChange={(e : ChangeEvent<HTMLInputElement>) => props.onCallback(e.target.value)} />
+               <div className="search-bar">
+               <img src={searchicon} className="searchicon" alt="" width={25} height={25} />
+               <input type="text" className="searchbar" onChange={(e : ChangeEvent<HTMLInputElement>) => props.onCallback(e.target.value)} />
+               </div>
                 </div>
 
 

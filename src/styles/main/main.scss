@@ -1,6 +1,6 @@
 
 @import '../cartpage.style';
-
+@import '../searchbar.style';
 
 body{
     padding: 0;
@@ -9,6 +9,13 @@ body{
 .search-section{
     display: flex;
     align-items: center;
+}
+
+.searchbar{
+    display: flex;
+    background-color: transparent;
+    outline: none;
+    border: none;
 }
 
 .navigationbar{
@@ -25,9 +32,6 @@ body{
     border-radius: 50%;
 }
 
-.searchbar{
-    display: none;
-}
 
 
 .product-title{
@@ -77,8 +81,6 @@ li{
         grid-template-columns: repeat(4,1fr);
     }
 
-    .searchbar{
-        display: flex;
-    }
+ 
 }
 

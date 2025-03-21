@@ -52,6 +52,13 @@
     gap: 10px;
   }
 }
+.search-bar {
+  display: flex;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -60,6 +67,13 @@ body {
 .search-section {
   display: flex;
   align-items: center;
+}
+
+.searchbar {
+  display: flex;
+  background-color: transparent;
+  outline: none;
+  border: none;
 }
 
 .navigationbar {
@@ -74,10 +88,6 @@ body {
 .person {
   background-color: rgba(128, 128, 128, 0.169);
   border-radius: 50%;
-}
-
-.searchbar {
-  display: none;
 }
 
 .product-title {
@@ -116,8 +126,5 @@ li {
 @media screen and (min-width: 568px) {
   .product-container {
     grid-template-columns: repeat(4, 1fr);
-  }
-  .searchbar {
-    display: flex;
   }
 }/*# sourceMappingURL=main.css.map */
