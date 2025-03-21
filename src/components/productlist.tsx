@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { ProductCard } from "./productcard";
-
-
+import { AppDispatch , Rootstate } from "../redux/store";
+import { addProducts } from "../redux/productsSlice/productSlice";
+import { useDispatch } from "react-redux";
 
 type ProductsData = {
     id : number,
@@ -16,6 +17,7 @@ type ProductsData = {
 export const ProductList = () =>{
 
     const [products, setProducts] = useState<ProductsData[]>([]);
+    const dispatch : AppDispatch = useDispatch();
 
     useEffect(() =>{
 
@@ -24,6 +26,7 @@ export const ProductList = () =>{
             const data =await res.data;
             console.log(data)
             setProducts(data);
+            dispatch(addProducts(data))
         }
 
         fetchProducts();
