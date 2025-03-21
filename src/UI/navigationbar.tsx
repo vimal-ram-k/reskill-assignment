@@ -3,8 +3,9 @@ import logo from '../assets/logo.svg';
 import person from '../assets/person.png';
 import searchicon from '../assets/search-icon.png';
 import cart from '../assets/cart.png';
+import { ChangeEvent } from "react";
 
-export const NavigationBar = () =>{
+export const NavigationBar = (props : {onCallback : (text : string) => void}) =>{
 
     return(
         <div className="navigationbar">
@@ -15,7 +16,7 @@ export const NavigationBar = () =>{
             <section className="right-container">
                 <div className="search-section">
                 <img src={searchicon} className="searchicon" alt="" width={30} height={30} />
-                <input type="text" className="searchbar" />
+                <input type="text" className="searchbar" onChange={(e : ChangeEvent<HTMLInputElement>) => props.onCallback(e.target.value)} />
                 </div>
 
 

@@ -1,41 +1,20 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+
 import { ProductCard } from "./productcard";
-import { AppDispatch , Rootstate } from "../redux/store";
-import { addProducts } from "../redux/productsSlice/productSlice";
-import { useDispatch } from "react-redux";
 
-type ProductsData = {
-    id : number,
-    title : string;
-    image :string,
-    price :number
-}
+import { ProductsData } from "../types/productTypes";
 
 
 
-export const ProductList = () =>{
+export const ProductList = (props : { products : ProductsData [] , searchKey : string}) =>{
 
-    const [products, setProducts] = useState<ProductsData[]>([]);
-    const dispatch : AppDispatch = useDispatch();
-
-    useEffect(() =>{
-
-        const fetchProducts = async() =>{
-            const res = await axios.get("https://fakestoreapi.com/products")
-            const data =await res.data;
-            console.log(data)
-            setProducts(data);
-            dispatch(addProducts(data))
-        }
-
-        fetchProducts();
-    },[])
+    const filteredProducts = props.products.filter((product) =>
+        product.title.toLowerCase().includes(props.searchKey.toLowerCase()) 
+    );
 
     return(
 
         <ul className="product-container">
-       <ProductCard products={products} />
+       <ProductCard products={filteredProducts} totalPrice={true} />
         </ul>
 
 
