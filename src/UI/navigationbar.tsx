@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.svg';
 import person from '../assets/person.png';
 import searchicon from '../assets/search-icon.png';
 import cart from '../assets/cart.png';
@@ -9,7 +9,7 @@ export const NavigationBar = () =>{
     return(
         <div className="navigationbar">
             <Link to={"/"}> 
-            <img src={logo} alt="" width={100} height={100} />
+            <img src={logo} alt="" width={30} height={30} />
             </Link>
 
             <section className="right-container">

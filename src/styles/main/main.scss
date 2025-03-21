@@ -1,5 +1,11 @@
 
+@import '../cartpage.style';
 
+
+body{
+    padding: 0;
+    margin: 0;
+}
 .search-section{
     display: flex;
     align-items: center;
@@ -10,6 +16,8 @@
     align-items: center;
     height: 60px;
     justify-content: space-between;
+    padding: 0px 40px;
+    background-color: rgba(128, 128, 128, 0.151);
 }
 
 .person{

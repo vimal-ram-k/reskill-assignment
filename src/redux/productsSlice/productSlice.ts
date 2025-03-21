@@ -1,12 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { ProductsData } from "../../types/productTypes";
 
 
-type ProductsData = {
-    id: number,
-    title: string;
-    image: string,
-    price: number
-}
 
 
 const initialState: ProductsData[] = []

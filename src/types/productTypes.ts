@@ -5,5 +5,10 @@ export type ProductsData = {
     title: string;
     image: string,
     price: number
-    description : string
+    description : string,
+    rating : {
+        rate : number,
+        count : number
+    },
+    category : string,
 }
