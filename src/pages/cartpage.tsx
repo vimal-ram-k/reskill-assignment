@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import { Rootstate } from "../redux/store";
 import { ProductCard } from "../components/productcard";
+import { TotalPrice } from "../UI/totalprice";
 
 export const CartPage = () =>{
 
@@ -11,6 +12,7 @@ export const CartPage = () =>{
     return(
         <ul>
           <ProductCard products={itemsId} />
+          <TotalPrice items={itemsId}/>
         </ul>
         
     )

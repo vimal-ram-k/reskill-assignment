@@ -22,6 +22,10 @@
 }
 
 
+.product-title{
+    font-size: 0.8rem;
+  }
+
 
 
 .right-container{
@@ -43,7 +47,9 @@ li{
 
 
 .product-container{
+    padding: 0;
     display: grid;
+    gap: 20px;
     grid-template-columns: repeat(2,1fr);
 
     h1{

@@ -7,7 +7,7 @@ type ProductsData = {
     image: string,
     price: number
 }
-export const ProductCard = (props: { products: ProductsData[] }) => {
+export const ProductCard = (props: { products: ProductsData[] , totalPrice : boolean  }) => {
 
     return (
 
@@ -15,7 +15,7 @@ export const ProductCard = (props: { products: ProductsData[] }) => {
             <Link to={`/${item.id}`}>
             <li className=" product-item">
                 <img src={item.image} alt="" className="product-image" />
-                <h1>{item.title}</h1>
+                <h1 className="product-title">{item.title}</h1>
                 <h1>From ${item.price}</h1>
             </li>
             </Link>
