@@ -12,7 +12,7 @@ export const ProductCard = (props: { products: ProductsData[] , totalPrice : boo
     return (
 
         props.products.map((item, index) =>
-            <Link to={`/${item.id}`}>
+            <Link to={`/${item.id}`} key={index}>
             <li className=" product-item">
                 <img src={item.image} alt="" className="product-image" />
                 <h1 className="product-title">{item.title}</h1>

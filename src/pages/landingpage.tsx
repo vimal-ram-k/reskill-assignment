@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"
+import { data, Outlet, useLocation } from "react-router-dom"
 import { NavigationBar } from "../UI/navigationbar"
 import { useEffect, useState } from "react";
 import { ProductsData } from "../types/productTypes";
@@ -33,10 +33,21 @@ export const LandingPage = () => {
 setSearchKey(text)
     }
 
+    const location = useLocation();
+
+    const [showProductList , setShowProductList] = useState(true);
+    useEffect(() => {
+        setShowProductList(location.pathname === "/");
+    }, [location.pathname]);
+
     return(
         <>
         <NavigationBar onCallback={addSearchKey} />
+        {
+            showProductList && 
         <ProductList products={products} searchKey ={searchKey} />
+
+        }
         <Outlet />
         </>
     )
