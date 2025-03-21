@@ -9,9 +9,7 @@ type ProductsData = {
 }
 
 
-const initialState: ProductsData[] = [
-
-]
+const initialState: ProductsData[] = []
 
 const productSlice = createSlice({
     name: "products",
@@ -20,6 +18,7 @@ const productSlice = createSlice({
         addProducts: (state, action: PayloadAction<ProductsData[]>) => {
             return action.payload
         },
+   
       
     }
 })

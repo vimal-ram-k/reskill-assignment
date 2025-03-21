@@ -7,6 +7,7 @@ import { ProductList } from './components/productlist.tsx';
 import { ProductPage } from './pages/productpage.tsx';
 import { Provider } from 'react-redux';
 import { Store } from './redux/store.ts';
+import { CartPage } from './pages/cartpage.tsx';
 
 
 createRoot(document.getElementById('root')!).render(
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
         
         <Route path='/' element={<ProductList />} />
         <Route path='/:id' element={<ProductPage />} />
+        <Route path='cart' element={<CartPage />} />
 
         </Route>
 

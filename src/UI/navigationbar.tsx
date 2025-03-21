@@ -21,7 +21,8 @@ export const NavigationBar = () =>{
 
                 
                 <img src={person} className="person" alt="" height={30} width={40} />
-                <img src={cart} className="cart" alt="" height={30} width={30} />
+                <Link to={"/cart"}>
+                <img src={cart} className="cart" alt="" height={30} width={30} /></Link>
 
             </section>
         </div>

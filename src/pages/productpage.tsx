@@ -4,7 +4,7 @@ import { Rootstate } from "../redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import { ProductCard } from "../components/productcard";
 import { AppDispatch } from "../redux/store";
-import { addItemToCard } from "../redux/userSlice/userSlice";
+import { addItemToCard } from "../redux/cartSlice/cartSlice";
 export const ProductPage = () =>{
 
 
@@ -15,11 +15,12 @@ export const ProductPage = () =>{
         return state.products.find(item => item.id === Number(id));
     })
 
-    function addItem (){
-        dispatch(addItemToCard(Number(id)))
-    }
 
     if(!product) return <h1>No product</h1>
+
+    function addItem (){
+        dispatch(addItemToCard(product))
+    }
     return(
         <div>
             <ProductCard products={[product]} />
