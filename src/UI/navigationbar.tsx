@@ -9,8 +9,9 @@ export const NavigationBar = (props : {onCallback : (text : string) => void}) =>
 
     return(
         <div className="navigationbar">
-            <Link to={"/"}> 
+            <Link to={"/"} className="logo"> 
             <img src={logo} alt="" width={30} height={30} />
+            <h1>ShopCart</h1>
             </Link>
 
             <section className="right-container">

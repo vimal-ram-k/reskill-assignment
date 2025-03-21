@@ -11,6 +11,16 @@ body{
     align-items: center;
 }
 
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #000;
+    font-size: 0.6rem;
+}
 .searchbar{
     display: flex;
     background-color: transparent;
