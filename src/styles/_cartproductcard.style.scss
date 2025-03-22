@@ -1,20 +1,6 @@
 
 
-@media screen and (min-width : 768) {
-    
-    .cart-product-card{
-        grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr;
-    }
 
-    .total-price-grid{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-
-    }
-
-    .cart-container{
-        grid-template-columns: 1fr 1fr;
-    }
-}
 .cart-product-card{
     display: grid;
     grid-template-columns:1fr;
@@ -92,4 +78,22 @@
     color: white;
     border: none;
     border-radius: 10px;
+}
+
+
+
+@media screen and (min-width : 768px) {
+    
+    .cart-product-card{
+        grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr;
+    }
+
+    .total-price-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    }
+
+    .cart-container{
+        grid-template-columns: 3fr 1fr;
+    }
 }
