@@ -30,7 +30,7 @@ export const ProductCard = (props: { products: ProductsData[] , totalPrice : boo
         <div className="product-card-footer"> 
         <button className="cart-add-btn" onClick={() => addItemtoCart(item)}>Add to Cart</button>
             {
-                item.id % 3 === 0 || item.id % 2 === 0 &&
+                item.id % 3 === 1 || item.id % 3 === 2 &&
                 <h1 className="cart-alert"> Hurry, Only {item.id % 2} left</h1>
                }
         </div>

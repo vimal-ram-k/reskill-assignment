@@ -312,9 +312,11 @@ li {
   flex-direction: column;
   align-items: center;
 }
-.product-container .product-card-footer {
-  display: flex;
-  gap: 20px;
+@media screen and (min-width: 768px) {
+  .product-container .product-card-footer {
+    display: flex;
+    gap: 20px;
+  }
 }
 .product-container .product-title {
   white-space: wrap;

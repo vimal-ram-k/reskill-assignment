@@ -104,9 +104,12 @@ li{
         align-items: center;
     }
 
-    .product-card-footer{
+
+    @media screen and (min-width : 768px) {
+        .product-card-footer{
         display: flex; 
         gap: 20px;
+        }
     }
 
     .product-title{
