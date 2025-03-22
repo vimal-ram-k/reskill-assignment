@@ -15,6 +15,15 @@ body{
 }
 
 
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover{
+    color: blue;
+    cursor: pointer;
+}
 
 .logo{
     display: flex;
@@ -24,6 +33,8 @@ body{
     color: #000;
     font-size: 0.6rem;
 }
+
+
 .searchbar{
     display: flex;
     background-color: transparent;
@@ -37,6 +48,7 @@ body{
     height: 60px;
     justify-content: space-between;
     padding: 0px 30px 0px 10px;
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.351);
     background-coor: rgba(128, 128, 128, 0.151);
 }
 
@@ -72,7 +84,8 @@ li{
 
 
 .product-container{
-    padding: 0;
+    background-color: rgba(128, 128, 128, 0.104);
+    padding: 10px;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(2,1fr);
@@ -81,10 +94,18 @@ li{
         font-size: 0.8rem;
     }
 
+        margin: 0;
+
     .product-item{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .product-card{
+        border: 1px solid rgba(128, 128, 128, 0.097);
+        padding: 20px;
+        background-color: white;
     }
 }
 
