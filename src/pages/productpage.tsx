@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 import { Rootstate } from "../redux/store";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,20 +22,20 @@ export const ProductPage = () =>{
         dispatch(addItemToCard(product))
     }
     return(
-        <div className="cart-container">
-            <section>
+        <div>
+            <Link to="/">
+            <button className="back-btn">Back</button></Link>
+        <div className="productpage-container">
                 <img src={product.image} alt="" className="cart-product-image"/>
-            <button className="cart-add-btn" onClick={addItem}>Add to Cart</button>
-
-            </section>
-
             <div>
                 <h1>{product.title}</h1>
                 <button className="cart-rate-btn" disabled>{product.rating.rate}</button>
                 <h1 className="cart-alert"> Hurry, Only 8 left</h1>
                 <h1 className="cart-product-desc">{product.description}</h1>
                 <h1>$ {product.price}</h1>
+            <button className="cart-add-btn" onClick={addItem}>Add to Cart</button>
             </div>
+        </div>
         </div>
     )
 }

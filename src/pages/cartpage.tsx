@@ -4,6 +4,8 @@ import { ProductCard } from "../components/productcard";
 import { TotalPrice } from "../UI/totalprice";
 import { PriceDetails } from "../UI/pricedetails";
 import { ShippingAddressDetails } from "../UI/shippingaddresscard";
+import { OrderConfirmation } from "../components/orderconfimation";
+import { useState } from "react";
 
 export const CartPage = () =>{
 
@@ -14,6 +16,11 @@ export const CartPage = () =>{
     const total_price = itemsId.reduce((sum , item) => sum + item.price , 0); 
     const discount = Math.floor(total_price % 10);
 
+    const [showOrderPaynow , setShowOrderPayNow] = useState(false);
+
+    function handleShowPay(){
+        setShowOrderPayNow(prev => !prev)
+    }
 
     return(
         <>
@@ -54,8 +61,12 @@ export const CartPage = () =>{
         }
         </ul>
         </div>
-        <PriceDetails itemId={itemsId} />
+        <PriceDetails itemId={itemsId} onCallback ={handleShowPay} />
+        {
+            showOrderPaynow && 
+        <OrderConfirmation onCallback ={handleShowPay} />
 
+        }
         </div>
         
         </>

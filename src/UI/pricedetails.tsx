@@ -1,7 +1,7 @@
 import { ProductsData } from "../types/productTypes"
 
 
-export const PriceDetails = (props : {itemId : ProductsData []}) =>{
+export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : () => void}) =>{
 
     const total_price = props.itemId.reduce((sum , item) => sum + item.price , 0); 
     const discount = Math.floor(total_price % 10);
@@ -27,7 +27,7 @@ export const PriceDetails = (props : {itemId : ProductsData []}) =>{
             <h1>Total Amount</h1>
             <h1>$ {total_price  - discount }</h1>
         </li>
-        <button className="place-order-btn">PLACE ORDER</button>
+        <button className="place-order-btn" onClick={props.onCallback}>PLACE ORDER</button>
         </ul>
 
 
