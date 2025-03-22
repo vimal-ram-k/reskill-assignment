@@ -152,6 +152,20 @@
     grid-template-columns: 3fr 1fr;
   }
 }
+.shipping-cart {
+  padding: 0px 50px;
+  border: 1px solid black;
+}
+.shipping-cart h1 {
+  font-size: 0.8rem;
+}
+.shipping-cart .header {
+  font-size: 1rem;
+}
+.shipping-cart address {
+  padding: 0px 45px;
+}
+
 body {
   padding: 0;
   margin: 0;

@@ -3,6 +3,7 @@ import { Rootstate } from "../redux/store";
 import { ProductCard } from "../components/productcard";
 import { TotalPrice } from "../UI/totalprice";
 import { PriceDetails } from "../UI/pricedetails";
+import { ShippingAddressDetails } from "../UI/shippingaddresscard";
 
 export const CartPage = () =>{
 
@@ -23,6 +24,7 @@ export const CartPage = () =>{
                 <h1>From Saved Address</h1>
                 <button className="cart-btn">Enter Delivery Pincode</button>
             </section>
+            <ShippingAddressDetails />
    
         <ul>
           {
