@@ -71,9 +71,27 @@
 }
 .search-bar {
   display: flex;
-  border: 1px solid black;
   padding: 5px 10px;
   border-radius: 20px;
+  opacity: 0.5;
+  width: 150px;
+  border: 0.5px solid green;
+  transition: all 1s linear;
+}
+
+.searchbar {
+  color: green;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 568px) {
+  .search-bar {
+    width: 250px;
+  }
+}
+.search-bar:hover {
+  opacity: 1;
+  transition: all 0.5s linear;
 }
 
 .cart-badge {

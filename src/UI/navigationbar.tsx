@@ -23,13 +23,13 @@ export const NavigationBar = (props : {onCallback : (text : string) => void}) =>
                 <div className="search-section">
                <div className="search-bar">
                <img src={searchicon} className="searchicon" alt="" width={25} height={25} />
-               <input type="text" className="searchbar" onChange={(e : ChangeEvent<HTMLInputElement>) => props.onCallback(e.target.value)} />
+               <input type="text" autoFocus className="searchbar" onChange={(e : ChangeEvent<HTMLInputElement>) => props.onCallback(e.target.value)} />
                </div>
                 </div>
 
 
                 
-                <img src={person} className="person" alt="" height={30} width={40} />
+                <img src={person} className="person" alt="" height={35} width={35} />
                 <Link to={"/cart"}>
                 <div className=" cart-badge">
                 <img src={cart} className="cart" alt="" height={30} width={30} />
