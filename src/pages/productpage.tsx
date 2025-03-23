@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../redux/store";
 import { addItemToCard } from "../redux/cartSlice/cartSlice";
 import { ProductCountRemeinder } from "../components/productCountRemainder";
+import { ProductList } from "../components/productlist";
 export const ProductPage = () =>{
 
 
@@ -15,6 +16,10 @@ export const ProductPage = () =>{
         return state.products.find(item => item.id === Number(id));
     })
 
+    const same_category_products = useSelector((state : Rootstate) =>  {
+        return state.products.filter((item) => item.category === product?.category);
+    })
+    
 
     if(!product) return <h1>No product</h1>
 
@@ -22,6 +27,7 @@ export const ProductPage = () =>{
         if(product)
         dispatch(addItemToCard(product))
     }
+
     return(
         <div>
             <Link to="/">
@@ -37,6 +43,7 @@ export const ProductPage = () =>{
             <button className="cart-add-btn" onClick={addItem}>Add to Cart</button>
             </div>
         </div>
+        <ProductList products={same_category_products} searchKey="" />
         </div>
     )
 }
