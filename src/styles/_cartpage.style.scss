@@ -5,6 +5,10 @@
     height: 300px;
 }
 
+.cart-product-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 .back-btn{
     padding: 20px 10px;

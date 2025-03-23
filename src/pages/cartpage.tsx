@@ -33,27 +33,16 @@ export const CartPage = () =>{
             </section>
             <ShippingAddressDetails />
    
-        <ul>
+        <ul className="cart-product-card"> 
           {
               itemsId.map((item , index) => {
                   return(
-                      <div className=" cart-product-card">
- 
+                      <div className="">
                         <section className=" cart-product-card-grid">
                         <img src={item.image} alt="" width={100} height={100} />
                         <h1>{item.title}</h1>
-                        </section>
-
-                        <section>
-                            <h1>Quantity : {item.count}</h1>
-                        </section>
-
-                        <section>
-                            <h1>{item.count} * {item.price}</h1>
-                        </section>
-
-                        <section>
-                            <h1>$ {item.count * item.price}</h1>
+                        <h1 className="cartpage-quantity">Quantity : {item.count}</h1>
+                        <h1 className="cartpage-price">Price : ${item.price * item.count}</h1>
                         </section>
                     </div>
                 )
