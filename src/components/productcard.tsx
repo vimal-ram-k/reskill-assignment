@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ProductsData } from "../types/productTypes";
 import { AppDispatch } from "../redux/store";
 import { useDispatch } from "react-redux";
@@ -7,11 +7,21 @@ import { ProductCountRemeinder } from "./productCountRemainder";
 
 export const ProductCard = (props: { products: ProductsData[] , totalPrice : boolean  }) => {
 
- 
+
+    const location = useNavigate();
     const dispatch : AppDispatch = useDispatch();
 
+
     function addItemtoCart (product : ProductsData){
+       const notification =  new Notification("Added new product to cart" , {
+            body : product.title,
+            icon : product.image
+        })
         dispatch(addItemToCard(product))
+
+        notification.addEventListener("click" , () =>{
+            location(`/cart`)
+        } )
     }
     return (
 
