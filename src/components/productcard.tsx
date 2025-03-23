@@ -3,6 +3,7 @@ import { ProductsData } from "../types/productTypes";
 import { AppDispatch } from "../redux/store";
 import { useDispatch } from "react-redux";
 import { addItemToCard } from "../redux/cartSlice/cartSlice";
+import { ProductCountRemeinder } from "./productCountRemainder";
 
 export const ProductCard = (props: { products: ProductsData[] , totalPrice : boolean  }) => {
 
@@ -31,7 +32,7 @@ export const ProductCard = (props: { products: ProductsData[] , totalPrice : boo
         <button className="cart-add-btn" onClick={() => addItemtoCart(item)}>Add to Cart</button>
             {
                 item.id % 3 === 1 || item.id % 3 === 2 &&
-                <h1 className="cart-alert"> Hurry, Only {item.id % 2} left</h1>
+                <ProductCountRemeinder id={item.id} />
                }
         </div>
             </div>

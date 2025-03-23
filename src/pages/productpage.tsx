@@ -4,6 +4,7 @@ import { Rootstate } from "../redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../redux/store";
 import { addItemToCard } from "../redux/cartSlice/cartSlice";
+import { ProductCountRemeinder } from "../components/productCountRemainder";
 export const ProductPage = () =>{
 
 
@@ -30,7 +31,7 @@ export const ProductPage = () =>{
             <div>
                 <h1>{product.title}</h1>
                 <button className="cart-rate-btn" disabled>{product.rating.rate}</button>
-                <h1 className="cart-alert"> Hurry, Only 8 left</h1>
+                <ProductCountRemeinder id={product.id} />
                 <h1 className="cart-product-desc">{product.description}</h1>
                 <h1>$ {product.price}</h1>
             <button className="cart-add-btn" onClick={addItem}>Add to Cart</button>
