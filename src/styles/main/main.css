@@ -86,7 +86,7 @@
   padding: 5px 10px;
   border-radius: 20px;
   opacity: 0.5;
-  width: 100px;
+  width: 150px;
   border: 0.5px solid green;
   transition: all 1s linear;
 }
@@ -97,8 +97,8 @@
 }
 
 @media screen and (min-width: 568px) {
-  .searchbar {
-    width: 450px;
+  .search-bar {
+    width: 200px;
   }
 }
 .search-bar:hover {
