@@ -1,8 +1,8 @@
 
 import { PriceDetails } from "../UI/pricedetails";
 import { ShippingAddressDetails } from "../UI/shippingaddresscard";
-import { ExposeMethods, OrderConfirmation } from "../components/orderconfimation";
-import { useRef, useState } from "react";
+import {  OrderConfirmation } from "../components/orderconfimation";
+import {  useState } from "react";
 import { AddOrRemoveCartProduct } from "../components/addorremovecartproduct";
 import { AddressCard } from "../components/addresscard";
 import { Rootstate } from "../redux/store";
@@ -12,7 +12,6 @@ import { useSelector } from "react-redux";
 
 export const CartPage = () =>{
 
-    const orderConfimationRef = useRef<ExposeMethods | null>(null)
 
     const itemsId = useSelector((state : Rootstate) => {
         return state.cart.addedItemsId;
@@ -28,9 +27,7 @@ export const CartPage = () =>{
         setShowOrderPayNow(prev => !prev)
     }
 
-    function OrderCOnfimationFOcus (){
-        orderConfimationRef.current?.focus()
-    }
+  
 
 
     return(
@@ -68,10 +65,10 @@ export const CartPage = () =>{
         }
         </ul>
         </div>
-        <PriceDetails itemId={itemsId} onCallback ={handleShowPay} OrderConfirmationFocus={OrderCOnfimationFOcus}/>
+        <PriceDetails itemId={itemsId} onCallback ={handleShowPay} />
         {
             showOrderPaynow && 
-        <OrderConfirmation onCallback ={handleShowPay} ref={orderConfimationRef} />
+        <OrderConfirmation  />
 
         }
         </div>
