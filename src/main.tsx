@@ -3,12 +3,10 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes , Route } from 'react-router-dom'
 import { LandingPage } from './pages/landingpage.tsx'
 import './styles/main/main.css';
-import { ProductList } from './components/productlist.tsx';
 import { ProductPage } from './pages/productpage.tsx';
 import { Provider } from 'react-redux';
 import { Store } from './redux/store.ts';
 import { CartPage } from './pages/cartpage.tsx';
-import { OrderConfirmation } from './components/orderconfimation.tsx';
 import { OrderPage } from './pages/orders.tsx';
 
 

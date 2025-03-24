@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux"
 import { Rootstate } from "../redux/store"
-import { ProductList } from "../components/productlist";
 import { OrderStatus } from "../components/orderStatus";
 import { useState } from "react";
 import { OrderConfirmation } from "../components/orderconfimation";

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { ProductsData } from "../types/productTypes"
 import { AppDispatch, Rootstate } from "../redux/store";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { placeOrder } from "../redux/cartSlice/cartSlice";
 
 

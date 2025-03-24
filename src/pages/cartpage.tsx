@@ -1,7 +1,6 @@
 
 import { PriceDetails } from "../UI/pricedetails";
 import { ShippingAddressDetails } from "../UI/shippingaddresscard";
-import {  OrderConfirmation } from "../components/orderconfimation";
 import {  useState } from "react";
 import { AddOrRemoveCartProduct } from "../components/addorremovecartproduct";
 import { AddressCard } from "../components/addresscard";
@@ -47,6 +46,8 @@ export const CartPage = () =>{
           {
               itemsId.map((item , index) => {
                   return(
+                    <li key={index+item.title.trim()[0]}>
+
                         <section className=" cart-product-card-grid">
                         <img src={item.image} alt="" width={100} height={100} />
                         <h1>{item.title}</h1>
@@ -58,6 +59,7 @@ export const CartPage = () =>{
                              </h1>
                         <h1 className="cartpage-price">Price : ${item.price * item.count}</h1>
                         </section>
+                    </li>
                 )
             })
         }

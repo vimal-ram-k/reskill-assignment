@@ -1,10 +1,9 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ProductsData } from "../types/productTypes";
 import { AppDispatch } from "../redux/store";
 import { useDispatch } from "react-redux";
 import { addItemToCard } from "../redux/cartSlice/cartSlice";
 import { ProductCountRemeinder } from "./productCountRemainder";
-import { useEffect } from "react";
 
 export const ProductCard = (props: { products: ProductsData[] , totalPrice : boolean  }) => {
 

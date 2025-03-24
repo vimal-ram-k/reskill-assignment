@@ -1,4 +1,4 @@
-import { data, Outlet, useLocation } from "react-router-dom"
+import {  Outlet, useLocation } from "react-router-dom"
 import { NavigationBar } from "../UI/navigationbar"
 import { useEffect, useState } from "react";
 import { ProductsData } from "../types/productTypes";
