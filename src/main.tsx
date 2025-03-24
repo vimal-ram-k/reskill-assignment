@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 import { Store } from './redux/store.ts';
 import { CartPage } from './pages/cartpage.tsx';
 import { OrderConfirmation } from './components/orderconfimation.tsx';
+import { OrderPage } from './pages/orders.tsx';
 
 
 createRoot(document.getElementById('root')!).render(
@@ -20,7 +21,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path='/' element={<LandingPage />} >
         <Route path='/:id' element={<ProductPage />} />
         <Route path='cart' element={<CartPage />} />
-        <Route path='order' element={<OrderConfirmation  />} />
+        <Route path='order' element={<OrderPage  />} />
 
 
         </Route>

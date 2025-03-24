@@ -1,0 +1,63 @@
+
+
+.orderpage-main{
+    padding: max(30px , 1%);
+}
+
+.status{
+    color: green;
+}
+.orderpage-container{
+        padding: 0%;
+        margin: 0;
+    .orderpage-section{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        align-items: center;
+       border:1px solid black;
+       padding: 10px 20px; 
+        font-size: 0.5rem;
+    }
+
+    button{
+        padding: 5px 10px;
+        font-size: 0.8rem;
+
+        &:hover{
+            cursor: pointer;
+            background-color: red;
+            color: white;
+        }
+    }
+
+}
+
+@media screen and (min-width : 768px) {
+
+    .orderpage-details-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;align-items: center;
+        font-size: 0.8rem;
+    }
+
+  
+
+    .orderpage-container{
+        padding: 20px;
+        grid-template-columns: 4fr 1fr;
+
+
+        img{
+            width: 200px;
+            height: 200px;
+        }
+
+
+        button{
+
+            max-width: 100px;
+        
+        }
+    
+    }
+}

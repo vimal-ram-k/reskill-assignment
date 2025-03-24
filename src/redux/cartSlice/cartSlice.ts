@@ -7,6 +7,7 @@ type cartItemsCount = ProductsData & {
 
 interface CartItems {
   addedItemsId: cartItemsCount[]
+  orderedItems : ProductsData[];
 }
 
 const getIntialState = () =>{
@@ -14,12 +15,12 @@ const getIntialState = () =>{
   if(state){
     try{
       const parsedState = JSON.parse(state);
-      return parsedState.cart || {addedItemsId : []};
+      return parsedState.cart || {addedItemsId : [] , orderedItems : []};
     }catch(err){
       return err
     }
   }
-  return { addedItemsId : []}
+  return { addedItemsId : [], orderedItems : []}
 }
 const InitialCart: CartItems  = getIntialState();
 
@@ -45,9 +46,14 @@ export const cartSlice = createSlice({
       if(existingItem){
         existingItem.count = existingItem.count > 0 ? existingItem.count - 1 : existingItem.count;
     }
+  },
+  placeOrder : (state , action : PayloadAction<ProductsData []>) =>{
+    state.addedItemsId= [];
+    state.orderedItems.push(...action.payload)
+    
   }
   }
 })
 
 export default cartSlice.reducer;
-export const { addItemToCard , removeFromCart } = cartSlice.actions;
+export const { addItemToCard , removeFromCart , placeOrder } = cartSlice.actions;

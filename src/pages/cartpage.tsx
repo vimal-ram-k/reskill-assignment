@@ -18,13 +18,9 @@ export const CartPage = () =>{
     })
 
     const [showAddressCard , setShowAddressCard] = useState(false);
-    const [showOrderPaynow , setShowOrderPayNow] = useState(false);
 
     function handleShowAddressCard (){
         setShowAddressCard(prev => !prev);
-    }
-    function handleShowPay(){
-        setShowOrderPayNow(prev => !prev)
     }
 
   
@@ -65,12 +61,7 @@ export const CartPage = () =>{
         }
         </ul>
         </div>
-        <PriceDetails itemId={itemsId} onCallback ={handleShowPay} />
-        {
-            showOrderPaynow && 
-        <OrderConfirmation  />
-
-        }
+        <PriceDetails itemId={itemsId}  />
         </div>
         
         </>

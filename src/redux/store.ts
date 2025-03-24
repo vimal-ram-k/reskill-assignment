@@ -7,7 +7,7 @@ import { UserAddressinitalState, UserSlice } from "./userSlice/userSlice";
 
 const localstore = loadStoreFromLocalstoage() || {
     products: [],  
-    cart: { addedItemsId: [] },
+    cart: { addedItemsId: [] , orderedItems : []},
     address : {address : UserAddressinitalState}
 };
 

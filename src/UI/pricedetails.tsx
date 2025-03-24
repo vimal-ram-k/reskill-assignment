@@ -1,16 +1,21 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { ProductsData } from "../types/productTypes"
-import { Rootstate } from "../redux/store";
+import { AppDispatch, Rootstate } from "../redux/store";
 import { Link } from "react-router-dom";
+import { placeOrder } from "../redux/cartSlice/cartSlice";
 
 
-export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : () => void }) =>{
+export const PriceDetails = (props : {itemId : ProductsData [] }) =>{
 
     const products = useSelector((state : Rootstate) => state.cart.addedItemsId);
     const total_price = Math.round(products.reduce((sum , item) => sum + (item.price * item.count) ,0))
     const discount = Math.floor(total_price % 10);
 
-    
+    const dispatch : AppDispatch = useDispatch();
+
+    function placeOrders () {
+        dispatch(placeOrder(products))
+    }
        
 
     return(
@@ -35,8 +40,7 @@ export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : ()
             <h1>$ {total_price  - discount }</h1>
         </li>
         <Link to="/order">
-        <button className="place-order-btn">PLACE ORDER</button>
-        
+        <button className="place-order-btn" onClick={placeOrders}>PLACE ORDER</button>
         </Link>
         </ul>
 

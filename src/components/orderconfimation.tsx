@@ -6,15 +6,15 @@ export type ExposeMethods = {
     focus : () => void
 }
 
-export const OrderConfirmation = () =>{
+export const OrderConfirmation = (props : {onCallback : () => void}) =>{
 
 
     return(
         <div className="order-confr-container"  >
             <h1 className="header">Order Confirmed !</h1>
             <ShippingAddressDetails />
-            <Link to="/">
-            <button className="pay-btn">Close</button></Link>
+            <Link to="/order">
+            <button className="pay-btn" onClick={props.onCallback}>Close</button></Link>
            
         </div>
     )
