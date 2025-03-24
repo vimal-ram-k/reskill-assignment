@@ -57,7 +57,6 @@ a:hover {
   justify-content: space-between;
   padding: 0px 30px 0px 10px;
   border-bottom: 0.5px solid rgba(128, 128, 128, 0.351);
-  background-coor: rgba(128, 128, 128, 0.151);
 }
 
 .btn-myorder{
@@ -147,12 +146,23 @@ li {
 
 
 @media screen and (min-width : 568px) and (max-width : 999px)  {
+
+  .navigationbar{
+    padding: 0px 50px;
+  }
+
   .product-container{
     grid-template-columns: repeat( 3, 1fr);
   }
 }
 
 @media screen and (min-width: 1000px) {
+
+  .navigationbar{
+    padding: 0px 50px;
+  }
+
+
   .product-container{
     grid-template-columns: repeat(4, 1fr);
   }
