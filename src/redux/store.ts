@@ -4,7 +4,10 @@ import cartSlice from "./cartSlice/cartSlice";
 import { loadStoreFromLocalstoage, saveStoreLocalstorage } from "../helper/loadstorelocally";
 
 
-const localstore = loadStoreFromLocalstoage();
+const localstore = loadStoreFromLocalstoage() || {
+    products: [],  
+    cart: { addedItemsId: [] },
+};
 
 export const Store = configureStore({
     reducer :{

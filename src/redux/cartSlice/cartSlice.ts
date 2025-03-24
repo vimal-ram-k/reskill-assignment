@@ -14,12 +14,12 @@ const getIntialState = () =>{
   if(state){
     try{
       const parsedState = JSON.parse(state);
-      return parsedState.cart || {addItemToCard : []};
+      return parsedState.cart || {addedItemsId : []};
     }catch(err){
       return err
     }
   }
-  return {addItemToCard : []}
+  return { addedItemsId : []}
 }
 const InitialCart: CartItems  = getIntialState();
 
