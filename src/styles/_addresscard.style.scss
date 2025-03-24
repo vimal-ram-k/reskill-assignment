@@ -1,0 +1,37 @@
+
+
+
+.address-card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    padding: 20px 40px;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 16%, rgba(0,212,255,1) 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    width: 70dvw;
+    gap: 10px;
+
+    input{
+        width: 60vw;
+        max-width: 450px;
+        padding: 20px 20px;
+        font-size: 1rem;
+    }
+
+    .header{
+
+    }
+
+}
+
+@media screen and (min-width : 768px) {
+    .address-card{
+        width: 500px;
+    }
+}

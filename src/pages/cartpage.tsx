@@ -1,25 +1,49 @@
 import { useSelector } from "react-redux"
 import { Rootstate } from "../redux/store";
-import { ProductCard } from "../components/productcard";
-import { TotalPrice } from "../UI/totalprice";
 import { PriceDetails } from "../UI/pricedetails";
 import { ShippingAddressDetails } from "../UI/shippingaddresscard";
 import { OrderConfirmation } from "../components/orderconfimation";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { AddOrRemoveCartProduct } from "../components/addorremovecartproduct";
+import { AddressCard } from "../components/addresscard";
+import { AddressType } from "../types/addressTypes";
 
 export const CartPage = () =>{
+
+
+    const [address , setAddress ]= useState<AddressType>({
+        name : "",
+        fathername : "",
+        area : "",
+        pincode : ""
+    })
+
+
+
+    function setAddressDetails (key : keyof AddressType , value :string){
+
+        setAddress(prev =>{
+           return{ ...prev , [key] : value}}
+        )
+        console.log(address)
+    }
 
     const itemsId = useSelector((state : Rootstate) => {
         return state.cart.addedItemsId;
     })
+
+
+    const [showAddressCard , setShowAddressCard] = useState(false);
 
     const total_price = itemsId.reduce((sum , item) => sum + item.price , 0); 
     const discount = Math.floor(total_price % 10);
 
     const [showOrderPaynow , setShowOrderPayNow] = useState(false);
 
+
+    function handleShowAddressCard (){
+        setShowAddressCard(prev => !prev);
+    }
     function handleShowPay(){
         setShowOrderPayNow(prev => !prev)
     }
@@ -31,9 +55,13 @@ export const CartPage = () =>{
 
             <section className="cart-header">
                 <h1>From Saved Address</h1>
-                <button className="cart-btn">Enter Delivery Pincode</button>
+                <button className="cart-btn" onClick={handleShowAddressCard}>Enter Delivery Pincode</button>
             </section>
-            <ShippingAddressDetails />
+            <ShippingAddressDetails address={address} />
+
+            {
+                showAddressCard && <AddressCard onCallback={setAddressDetails} closeModule= {handleShowAddressCard} address={address}/>
+            }
    
         <ul className="cart-product-card"> 
           {

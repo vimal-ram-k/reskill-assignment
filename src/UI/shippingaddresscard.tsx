@@ -1,15 +1,16 @@
+import { AddressType } from "../types/addressTypes"
 
-export const ShippingAddressDetails = () =>{
+export const ShippingAddressDetails = (props : {address : AddressType}) =>{
 
 
     return(
-        <div className=" shipping-cart">
+        <div className=" shipping-address-card">
             <h1 className="header">Shipping Details : </h1>
-            <address className="address-card">
-                <h1>Mr. Vimal Ram K ,</h1>
-                <h1>S/o Kamala Moorthy N,</h1>
-                <h1>Nadupalayam,</h1>
-                <h1>Erode 638154</h1>
+            <address className="">
+                <h1>{props.address.name}</h1>
+                <h1>{props.address.fathername}</h1>
+                <h1>{props.address.area}</h1>
+                <h1>{props.address.pincode}</h1>
             </address>
         </div>
     )
