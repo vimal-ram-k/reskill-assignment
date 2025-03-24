@@ -40,7 +40,9 @@ export const CartPage = () =>{
             {
                 showAddressCard && <AddressCard  closeModule= {handleShowAddressCard} />
             }
-   
+
+            {
+                itemsId.length === 0 ? <h1 className="no-item-cart">No Item in Cart</h1> : 
         <ul className="cart-product-card"> 
           {
               itemsId.map((item , index) => {
@@ -59,7 +61,9 @@ export const CartPage = () =>{
                 )
             })
         }
+
         </ul>
+            }
         </div>
         <PriceDetails itemId={itemsId}  />
         </div>

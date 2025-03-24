@@ -20,16 +20,9 @@
 
    .alert{
     color: red;
-    animation: blink 1s infinite;
+    font-size: 1rem;
    }
 
 }
 
 
-@keyframes blink {
-    0%{
-        opacity: 0%;
-    }100%{
-        opacity: 100%;
-    }
-}

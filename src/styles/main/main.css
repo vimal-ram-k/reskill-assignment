@@ -16,6 +16,13 @@
   color: green;
 }
 
+.no-item-cart {
+  font-size: 0.8rem;
+  border: 1px solid black;
+  height: 50px;
+  padding: 10px 40px;
+}
+
 .back-btn:hover {
   transform: scale(1.2);
 }
@@ -324,17 +331,9 @@
 }
 .shipping-address-card .alert {
   color: red;
-  animation: blink 1s infinite;
+  font-size: 1rem;
 }
 
-@keyframes blink {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
 .orderpage-main {
   padding: max(30px, 1%);
 }
