@@ -41,7 +41,9 @@ export const NavigationBar = (props : {onCallback : (text : string) => void}) =>
 
 
                 
-                <img src={person} className="person" alt="" height={35} width={35} />
+                <Link to="/order">
+                <button className="btn-myorder">Orders</button>
+                </Link>
                 <Link to={"/cart"}>
                 <div className=" cart-badge">
                 <img src={cart} className="cart" alt="" height={30} width={30} />

@@ -7,12 +7,20 @@ import { AddressCard } from "../components/addresscard";
 import { Rootstate } from "../redux/store";
 import { useSelector } from "react-redux";
 import { PaymentMethod } from "../components/paymentmethod";
+import { OrderConfirmation } from "../components/orderconfimation";
 
 
 
 export const CartPage = () =>{
 
 
+
+    const [showOrderConfirmation , setShowOrderCinfirmation] = useState(false)
+
+
+    function handleShowOrderCOnfirmation () {
+        setShowOrderCinfirmation(prev => !prev)
+    }
     const itemsId = useSelector((state : Rootstate) => {
         return state.cart.addedItemsId;
     })
@@ -23,6 +31,7 @@ export const CartPage = () =>{
         setShowAddressCard(prev => !prev);
     }
 
+    
   
 
 
@@ -69,7 +78,10 @@ export const CartPage = () =>{
         </ul>
             }
         </div>
-        <PriceDetails itemId={itemsId}  />
+        <PriceDetails itemId={itemsId} onCallback={handleShowOrderCOnfirmation}  />
+        {
+            showOrderConfirmation && <OrderConfirmation onCallback={handleShowOrderCOnfirmation} />
+        }
         </div>
         
         </>

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { placeOrder } from "../redux/cartSlice/cartSlice";
 
 
-export const PriceDetails = (props : {itemId : ProductsData [] }) =>{
+export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : () => void }) =>{
 
     const products = useSelector((state : Rootstate) => state.cart.addedItemsId);
     const total_price = Math.round(products.reduce((sum , item) => sum + (item.price * item.count) ,0))
@@ -20,7 +20,7 @@ const location = useNavigate();
     }
 
 
-    function chechAddress (){
+    async function chechAddress (){
         console.log(address)
         if(address === undefined){
             alert("Please enter address details")
@@ -29,8 +29,9 @@ const location = useNavigate();
         }
         
         else{
+
             placeOrders()
-            location('/order')
+            props.onCallback()
         }
 
     }
