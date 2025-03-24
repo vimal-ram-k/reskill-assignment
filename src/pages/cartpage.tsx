@@ -6,6 +6,7 @@ import { AddOrRemoveCartProduct } from "../components/addorremovecartproduct";
 import { AddressCard } from "../components/addresscard";
 import { Rootstate } from "../redux/store";
 import { useSelector } from "react-redux";
+import { PaymentMethod } from "../components/paymentmethod";
 
 
 
@@ -35,6 +36,7 @@ export const CartPage = () =>{
                 <button className="cart-btn" onClick={handleShowAddressCard}>Enter Delivery Address</button>
             </section>
             <ShippingAddressDetails  />
+            <PaymentMethod />
 
             {
                 showAddressCard && <AddressCard  closeModule= {handleShowAddressCard} />

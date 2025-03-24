@@ -429,6 +429,24 @@
     max-width: 100px;
   }
 }
+.payment-container {
+  border: 1px solid black;
+  padding: 0px 20px 20px;
+}
+.payment-container h1 {
+  font-size: 1rem;
+}
+
+.methods {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.methods section {
+  display: flex;
+  gap: 10px;
+}
+
 body {
   padding: 0;
   margin: 0;
