@@ -9,9 +9,19 @@ interface CartItems {
   addedItemsId: cartItemsCount[]
 }
 
-const InitialCart: CartItems = {
-  addedItemsId: []
+const getIntialState = () =>{
+  const state = localStorage.getItem("store");
+  if(state){
+    try{
+      const parsedState = JSON.parse(state);
+      return parsedState.cart || {addItemToCard : []};
+    }catch(err){
+      return err
+    }
+  }
+  return {addItemToCard : []}
 }
+const InitialCart: CartItems  = getIntialState();
 
 
 export const cartSlice = createSlice({
