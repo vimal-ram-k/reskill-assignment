@@ -364,22 +364,36 @@
   width: 50px;
   height: 50px;
 }
-.orderpage-container button {
-  padding: 5px 10px;
-  font-size: 0.8rem;
+.orderpage-container .orderpage-btn-collection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
 }
-.orderpage-container button:hover {
-  cursor: pointer;
-  background-color: red;
+.orderpage-container .orderpage-btn-collection button {
+  padding: 10px;
   color: white;
+  border: none;
+  border-radius: 10px;
+}
+.orderpage-container .orderpage-btn-collection button:hover {
+  transform: scale(1.1);
+  transition: all 0.5s linear;
+}
+.orderpage-container .orderpage-btn-collection .track {
+  background-color: green;
+  padding: 10px 30px;
+}
+.orderpage-container .orderpage-btn-collection .cancel {
+  background-color: rgba(130, 7, 7, 0.707);
 }
 
 @media screen and (min-width: 768px) {
   .orderpage-details-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   .orderpage-container {
     padding: 20px;

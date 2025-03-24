@@ -19,7 +19,11 @@ export const OrderStatus = (props : {products : ProductsData []}) =>{
                             <h1 className="status">Status : Order Placed</h1>
                             <h1>Deliver : {`${new Date().getDate() + 3}-Mon-2025 `}</h1>
                             </section>
-                            <button>Cancel Order</button>
+                            <section className="orderpage-btn-collection">
+                            <button className="cancel">Cancel Order</button>
+                            <button className="track">Track</button>
+                            </section>
+
                         </li>
                     )
                 })
