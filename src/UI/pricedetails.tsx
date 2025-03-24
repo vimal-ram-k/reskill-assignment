@@ -14,7 +14,7 @@ export const PriceDetails = (props : {itemId : ProductsData [] }) =>{
     const dispatch : AppDispatch = useDispatch();
 
     function placeOrders () {
-        dispatch(placeOrder(products))
+        dispatch(placeOrder())
     }
        
 

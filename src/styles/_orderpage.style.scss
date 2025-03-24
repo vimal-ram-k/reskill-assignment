@@ -12,12 +12,19 @@
         margin: 0;
     .orderpage-section{
         display: grid;
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 3fr 2fr;
         align-items: center;
        border:1px solid black;
        padding: 10px 20px; 
         font-size: 0.5rem;
     }
+
+    
+    img{
+        width: 50px;
+        height: 50px;
+    }
+
 
     button{
         padding: 5px 10px;
@@ -36,20 +43,22 @@
 
     .orderpage-details-container{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;align-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
         font-size: 0.8rem;
     }
 
-  
+
 
     .orderpage-container{
-        padding: 20px;
+        padding: 20px ;
         grid-template-columns: 4fr 1fr;
 
 
+
         img{
-            width: 200px;
-            height: 200px;
+            width: 100px;
+            height: 100px;
         }
 
 

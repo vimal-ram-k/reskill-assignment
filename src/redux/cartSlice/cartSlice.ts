@@ -47,9 +47,9 @@ export const cartSlice = createSlice({
         existingItem.count = existingItem.count > 0 ? existingItem.count - 1 : existingItem.count;
     }
   },
-  placeOrder : (state , action : PayloadAction<ProductsData []>) =>{
+  placeOrder : (state) =>{
+    state.orderedItems.push(...state.addedItemsId)
     state.addedItemsId= [];
-    state.orderedItems.push(...action.payload)
     
   }
   }

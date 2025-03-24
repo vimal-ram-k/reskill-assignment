@@ -349,11 +349,15 @@
 }
 .orderpage-container .orderpage-section {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 2fr;
   align-items: center;
   border: 1px solid black;
   padding: 10px 20px;
   font-size: 0.5rem;
+}
+.orderpage-container img {
+  width: 50px;
+  height: 50px;
 }
 .orderpage-container button {
   padding: 5px 10px;
@@ -377,21 +381,13 @@
     grid-template-columns: 4fr 1fr;
   }
   .orderpage-container img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
   }
   .orderpage-container button {
     max-width: 100px;
   }
 }
-.myorder-btn {
-  background-color: green;
-  color: white;
-  font-size: 0.6rem;
-  padding: 2px 5px;
-  border: none;
-}
-
 body {
   padding: 0;
   margin: 0;
