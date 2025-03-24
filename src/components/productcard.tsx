@@ -4,6 +4,7 @@ import { AppDispatch } from "../redux/store";
 import { useDispatch } from "react-redux";
 import { addItemToCard } from "../redux/cartSlice/cartSlice";
 import { ProductCountRemeinder } from "./productCountRemainder";
+import { useEffect } from "react";
 
 export const ProductCard = (props: { products: ProductsData[] , totalPrice : boolean  }) => {
 
@@ -13,6 +14,8 @@ export const ProductCard = (props: { products: ProductsData[] , totalPrice : boo
 
 
     function addItemtoCart (product : ProductsData){
+
+     
        const notification =  new Notification("Added new product to cart" , {
             body : product.title,
             icon : product.image

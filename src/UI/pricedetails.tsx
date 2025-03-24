@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { ProductsData } from "../types/productTypes"
 import { AppDispatch, Rootstate } from "../redux/store";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { placeOrder } from "../redux/cartSlice/cartSlice";
 
 
@@ -10,11 +10,29 @@ export const PriceDetails = (props : {itemId : ProductsData [] }) =>{
     const products = useSelector((state : Rootstate) => state.cart.addedItemsId);
     const total_price = Math.round(products.reduce((sum , item) => sum + (item.price * item.count) ,0))
     const discount = Math.floor(total_price % 10);
+    const address = useSelector((state :Rootstate) => state.address.address.name)
+const location = useNavigate();
 
     const dispatch : AppDispatch = useDispatch();
 
     function placeOrders () {
         dispatch(placeOrder())
+    }
+
+
+    function chechAddress (){
+        console.log(address)
+        if(address === undefined){
+            alert("Please enter address details")
+        }else if(products.length === 0){
+            alert("Please add items")
+        }
+        
+        else{
+            placeOrders()
+            location('/order')
+        }
+
     }
        
 
@@ -39,9 +57,7 @@ export const PriceDetails = (props : {itemId : ProductsData [] }) =>{
             <h1>Total Amount</h1>
             <h1>$ {total_price  - discount }</h1>
         </li>
-        <Link to="/order">
-        <button className="place-order-btn" onClick={placeOrders}>PLACE ORDER</button>
-        </Link>
+        <button className="place-order-btn" onClick={chechAddress}>PLACE ORDER</button>
         </ul>
 
 

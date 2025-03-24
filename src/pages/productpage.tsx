@@ -6,6 +6,7 @@ import { AppDispatch } from "../redux/store";
 import { addItemToCard } from "../redux/cartSlice/cartSlice";
 import { ProductCountRemeinder } from "../components/productCountRemainder";
 import { ProductList } from "../components/productlist";
+import { useEffect } from "react";
 export const ProductPage = () =>{
     const location = useNavigate();
 
@@ -18,6 +19,11 @@ export const ProductPage = () =>{
 
     const same_category_products = useSelector((state : Rootstate) =>  {
         return state.products.filter((item) => item.category === product?.category);
+    })
+
+
+    useEffect(() =>{
+        window.scrollTo(0,0)
     })
     
 
