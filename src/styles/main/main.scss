@@ -35,10 +35,11 @@ a:hover {
   gap: 10px;
   text-decoration: none;
   color: #000;
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   font-family: "Boldonse", system-ui;
   font-weight: 400;
   font-style: normal;
+
 }
 
 .searchbar {
@@ -81,10 +82,6 @@ li {
   list-style: none;
 }
 
-.product-prict{
-
-
-  }
 
 .product-container {
   background-color: rgba(128, 128, 128, 0.104);
@@ -108,12 +105,8 @@ li {
     align-items: center;
   }
 
-  @media screen and (min-width: 768px) {
-    .product-card-footer {
-      display: flex;
-      gap: 20px;
-    }
-  }
+
+
 
   .product-title {
     white-space: wrap;
@@ -138,8 +131,20 @@ li {
   }
 }
 
-@media screen and (min-width: 568px) {
-  .product-container {
+
+@media screen and (min-width : 568px) and (max-width : 999px)  {
+  .product-container{
+    grid-template-columns: repeat( 3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .product-container{
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .product-card-footer {
+    display: flex;
+    gap: 20px;
   }
 }
