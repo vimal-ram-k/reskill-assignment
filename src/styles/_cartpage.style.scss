@@ -3,6 +3,12 @@
 .cart-product-image{
     width: 300px;
     height: 300px;
+
+
+    &:hover{
+        transform: scale(1.2);
+        transition: all 0.4s linear;
+    }
 }
 
 .cart-product-card{
