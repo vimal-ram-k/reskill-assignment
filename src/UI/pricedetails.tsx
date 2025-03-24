@@ -3,13 +3,17 @@ import { ProductsData } from "../types/productTypes"
 import { Rootstate } from "../redux/store";
 
 
-export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : () => void}) =>{
+export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : () => void , OrderConfirmationFocus : () => void}) =>{
 
     const products = useSelector((state : Rootstate) => state.cart.addedItemsId);
     const total_price = Math.round(products.reduce((sum , item) => sum + (item.price * item.count) ,0))
     const discount = Math.floor(total_price % 10);
 
     
+    function getCOnfirmation (){
+        props.onCallback();
+        props.OrderConfirmationFocus();
+    }
 
     return(
 
@@ -32,7 +36,7 @@ export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : ()
             <h1>Total Amount</h1>
             <h1>$ {total_price  - discount }</h1>
         </li>
-        <button className="place-order-btn" onClick={props.onCallback}>PLACE ORDER</button>
+        <button className="place-order-btn" onClick={getCOnfirmation}>PLACE ORDER</button>
         </ul>
 
 

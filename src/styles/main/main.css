@@ -212,7 +212,7 @@
   align-items: center;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px); /* backdrop blur */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* optional shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.77); /* optional shadow for depth */
   border-radius: 20px;
 }
 .order-confr-container .header {
@@ -245,6 +245,12 @@
   border-radius: 50px;
 }
 
+@media screen and (min-width: 768px) {
+  .order-confr-container {
+    width: 50dvw;
+    height: 50dvh;
+  }
+}
 .price-container-header {
   padding: 5px 0px;
   border-bottom: 1px solid black;
@@ -316,7 +322,19 @@
   font-size: 0.8rem;
   margin-left: 30px;
 }
+.shipping-address-card .alert {
+  color: red;
+  animation: blink 1s infinite;
+}
 
+@keyframes blink {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 body {
   padding: 0;
   margin: 0;
