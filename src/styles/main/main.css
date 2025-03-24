@@ -203,14 +203,35 @@
   left: 50%;
   transform: translate(-50%, -50%);
   top: 50%;
-  background-color: rgb(2, 2, 2);
-  width: 50dvw;
-  color: white;
+  width: 400px;
+  color: black;
   height: 50dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px); /* backdrop blur */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* optional shadow for depth */
+  border-radius: 20px;
+}
+.order-confr-container .header {
+  color: green;
+}
+.order-confr-container .shipping-address-card {
+  width: 300px;
+}
+
+.shipping-address-card h1[class~=comma]::after {
+  content: " ,";
+}
+
+.shipping-address-card h1[class~=name]::before {
+  content: "Mr/Ms . ";
+}
+
+.shipping-address-card h1[class~=fathername]::before {
+  content: "S/O  ";
 }
 
 .pay-btn {
