@@ -3,6 +3,7 @@ import { ProductsData } from "../types/productTypes";
 
 export const OrderStatus = (props : {products : ProductsData []}) =>{
 
+    const isNoOrder = props.products.length === 0 ;
 
     return(
         <div className="orderpage-main">
@@ -29,6 +30,8 @@ export const OrderStatus = (props : {products : ProductsData []}) =>{
                 })
             }
         </ul>
+        {isNoOrder && <h1 className="order">No Orders</h1>}
+
             </div>
     )
 }

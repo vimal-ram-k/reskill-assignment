@@ -12,7 +12,7 @@ export const OrderPage = () =>{
     })
 
     const orderedItems = useSelector((state : Rootstate) => state.cart.orderedItems);
-   
+
 
     return(
         <div>
