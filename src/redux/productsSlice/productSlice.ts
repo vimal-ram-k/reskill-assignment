@@ -23,8 +23,8 @@ const productSlice = createSlice({
     name: "products",
     initialState: initialState,
     reducers: {
-        addProducts: (state, action: PayloadAction<ProductsData[]>) => {
-             state.push(...action.payload)
+        addProducts: (_state, action: PayloadAction<ProductsData[]>) => {
+             return action.payload
         },
    
       
