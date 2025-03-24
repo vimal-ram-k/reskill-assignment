@@ -1,0 +1,43 @@
+
+
+.price-container-header{
+    padding: 5px 0px;
+    border-bottom: 1px solid black;
+}
+
+.cart-price-details{
+
+
+
+    background-color: rgba(128, 128, 128, 0.084);
+    padding: 10px 20px;
+    font-size: 0.6rem;
+    font-weight: 400;
+
+    ul{
+        padding: 0%;
+    }
+
+    li{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .delivery-charge{
+        color: green;
+    }
+
+    span{
+        color: gray;
+    }
+
+    .place-order-btn{
+        padding: 15px 10px;
+        background-color: rgb(198, 91, 52);
+        color: white;
+        border: none;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+}

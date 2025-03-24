@@ -1,10 +1,15 @@
+import { useSelector } from "react-redux";
 import { ProductsData } from "../types/productTypes"
+import { Rootstate } from "../redux/store";
 
 
 export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : () => void}) =>{
 
-    const total_price = props.itemId.reduce((sum , item) => sum + item.price , 0); 
+    const products = useSelector((state : Rootstate) => state.cart.addedItemsId);
+    const total_price = Math.round(products.reduce((sum , item) => sum + (item.price * item.count) ,0))
     const discount = Math.floor(total_price % 10);
+
+    
 
     return(
 
@@ -21,7 +26,7 @@ export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : ()
         </li>
         <li className="">
             <h1>Delivery Charges</h1>
-            <h1 className="delivery-charge"><del className="">$40</del>Free</h1>
+                <h1 className="delivery-charge"><del className="">$40</del>Free</h1> 
         </li>
         <li>
             <h1>Total Amount</h1>

@@ -6,6 +6,8 @@ import { PriceDetails } from "../UI/pricedetails";
 import { ShippingAddressDetails } from "../UI/shippingaddresscard";
 import { OrderConfirmation } from "../components/orderconfimation";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { AddOrRemoveCartProduct } from "../components/addorremovecartproduct";
 
 export const CartPage = () =>{
 
@@ -37,14 +39,17 @@ export const CartPage = () =>{
           {
               itemsId.map((item , index) => {
                   return(
-                      <div className="">
                         <section className=" cart-product-card-grid">
                         <img src={item.image} alt="" width={100} height={100} />
                         <h1>{item.title}</h1>
-                        <h1 className="cartpage-quantity">Quantity : {item.count}</h1>
+                        <h1 className="cartpage-quantity">Quantity : 
+                        <AddOrRemoveCartProduct item={item} btn="remove" />
+                             {item.count}
+                        <AddOrRemoveCartProduct item={item} btn="add" />
+                             
+                             </h1>
                         <h1 className="cartpage-price">Price : ${item.price * item.count}</h1>
                         </section>
-                    </div>
                 )
             })
         }

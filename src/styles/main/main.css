@@ -125,7 +125,15 @@
 
 .cartpage-quantity {
   color: green;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 0.8rem;
+}
+
+.btn-cart-ra:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .cart-header {
@@ -157,34 +165,6 @@
 }
 .cart-container ul {
   padding: 0;
-}
-
-.cart-price-details {
-  background-color: rgba(128, 128, 128, 0.084);
-  padding: 10px 20px;
-  font-size: 0.8rem;
-  font-weight: 400;
-}
-.cart-price-details ul {
-  padding: 0%;
-}
-.cart-price-details li {
-  display: flex;
-  justify-content: space-between;
-}
-.cart-price-details .delivery-charge {
-  color: green;
-}
-.cart-price-details span {
-  color: gray;
-}
-
-.place-order-btn {
-  padding: 15px 10px;
-  background-color: rgb(210, 93, 51);
-  color: white;
-  border: none;
-  border-radius: 10px;
 }
 
 .cartpage-price {
@@ -242,6 +222,39 @@
   font-size: 1.2rem;
   border: none;
   border-radius: 50px;
+}
+
+.price-container-header {
+  padding: 5px 0px;
+  border-bottom: 1px solid black;
+}
+
+.cart-price-details {
+  background-color: rgba(128, 128, 128, 0.084);
+  padding: 10px 20px;
+  font-size: 0.6rem;
+  font-weight: 400;
+}
+.cart-price-details ul {
+  padding: 0%;
+}
+.cart-price-details li {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-price-details .delivery-charge {
+  color: green;
+}
+.cart-price-details span {
+  color: gray;
+}
+.cart-price-details .place-order-btn {
+  padding: 15px 10px;
+  background-color: rgb(198, 91, 52);
+  color: white;
+  border: none;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
 body {
