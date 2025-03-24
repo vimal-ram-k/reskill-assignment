@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 
 import { Rootstate } from "../redux/store";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,7 +7,7 @@ import { addItemToCard } from "../redux/cartSlice/cartSlice";
 import { ProductCountRemeinder } from "../components/productCountRemainder";
 import { ProductList } from "../components/productlist";
 export const ProductPage = () =>{
-
+    const location = useNavigate();
 
     const dispatch : AppDispatch= useDispatch()
     const {id} = useParams();
@@ -24,8 +24,18 @@ export const ProductPage = () =>{
     if(!product) return <h1>No product</h1>
 
     function addItem (){
-        if(product)
-        dispatch(addItemToCard(product))
+        if(product){
+
+            const notification =  new Notification("Added new product to cart" , {
+                body : product.title,
+                icon : product.image
+            })
+            
+            notification.addEventListener("click" , () =>{
+                location(`/cart`)
+            } )
+            dispatch(addItemToCard(product))
+        }
     }
 
     return(
