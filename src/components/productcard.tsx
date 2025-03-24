@@ -33,7 +33,7 @@ export const ProductCard = (props: { products: ProductsData[] , totalPrice : boo
                 <img src={item.image} alt="" className="product-image" />
                 <h1 className="product-title">{item.title}</h1>
                 <button className="cart-rate-btn" disabled>{item.rating.rate}</button>
-                <h1>From ${item.price}</h1>
+                <h1 className="product-price">From ${item.price}</h1>
             
             </li>
             </Link>
