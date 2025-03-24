@@ -2,17 +2,20 @@ import { configureStore } from "@reduxjs/toolkit";
 import productSlice from "./productsSlice/productSlice";
 import cartSlice from "./cartSlice/cartSlice";
 import { loadStoreFromLocalstoage, saveStoreLocalstorage } from "../helper/loadstorelocally";
+import { UserAddressinitalState, UserSlice } from "./userSlice/userSlice";
 
 
 const localstore = loadStoreFromLocalstoage() || {
     products: [],  
     cart: { addedItemsId: [] },
+    address : {address : UserAddressinitalState}
 };
 
 export const Store = configureStore({
     reducer :{
         products : productSlice.reducer,
-        cart: cartSlice
+        cart: cartSlice,
+        address : UserSlice.reducer
     },
     preloadedState : localstore,
 })
