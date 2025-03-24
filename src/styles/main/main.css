@@ -261,7 +261,7 @@
 @media screen and (min-width: 768px) {
   .order-confr-container {
     width: 50dvw;
-    height: 50dvh;
+    height: 60dvh;
   }
 }
 .price-container-header {
@@ -303,21 +303,43 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px 40px;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 16%, rgb(0, 212, 255) 100%);
-  color: white;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px); /* backdrop blur */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.77); /* optional shadow for depth */
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
   width: 70dvw;
   gap: 10px;
+  font-family: "Poppins";
+}
+.address-card .header {
+  font-size: 2rem;
 }
 .address-card input {
   width: 60vw;
   max-width: 450px;
-  padding: 20px 20px;
+  padding: 20px 10px;
   font-size: 1rem;
+  color: green;
+  font-family: "Poppins";
+}
+.address-card input:focus {
+  border: 1px solid green;
+}
+.address-card button {
+  font-family: "Poppins";
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+.address-card button:hover {
+  transform: scale(1.2);
+  transition: all 2s linear;
 }
 @media screen and (min-width: 768px) {
   .address-card {

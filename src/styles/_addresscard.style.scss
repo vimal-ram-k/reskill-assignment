@@ -1,37 +1,60 @@
-
-
-
-.address-card{
+.address-card {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% ,-50%);
+    transform: translate(-50%, -50%);
     padding: 20px 40px;
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 16%, rgba(0,212,255,1) 100%);
-    color: white;
+    backdrop-filter: blur(10px); /* backdrop blur */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.77); /* optional shadow for depth */
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
     width: 70dvw;
     gap: 10px;
+    font-family: "Poppins";
 
-    input{
-        width: 60vw;
-        max-width: 450px;
-        padding: 20px 20px;
-        font-size: 1rem;
-    }
 
     .header{
-
+        font-size: 2rem;
+       
     }
 
+    input {
+        width: 60vw;
+        max-width: 450px;
+        padding: 20px 10px;
+        font-size: 1rem;
+        color: green;
+        font-family: "Poppins";
+        &:focus{
+            border: 1px solid green;
+        }
+    }
+
+    button{
+        font-family: "Poppins";
+        padding: 10px 20px;
+        background-color: green ;
+        color: white;
+        border-radius: 10px;
+        border: none;
+
+        &:hover{
+            transform: scale(1.2);
+            transition: all 2s linear;
+        }
+    }
+
+    
+
+    .header {
+    }
 }
 
-@media screen and (min-width : 768px) {
-    .address-card{
+@media screen and (min-width: 768px) {
+    .address-card {
         width: 500px;
     }
 }
