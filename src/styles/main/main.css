@@ -366,8 +366,13 @@
   padding: max(30px, 1%);
 }
 
-.status {
+.placed {
   color: green;
+}
+
+.cancelled {
+  text-decoration: line-through;
+  color: red;
 }
 
 .orderpage-container {

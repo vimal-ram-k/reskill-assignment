@@ -1,9 +1,17 @@
-import { ProductsData } from "../types/productTypes";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../redux/store";
+import { orderedItems, ProductsData } from "../types/productTypes";
+import { cancelProduct } from "../redux/cartSlice/cartSlice";
 
-
-export const OrderStatus = (props : {products : ProductsData []}) =>{
+export const OrderStatus = (props : {products : orderedItems []}) =>{
 
     const isNoOrder = props.products.length === 0 ;
+
+    const dispatch : AppDispatch = useDispatch();
+
+    function cancel (product : ProductsData){
+        dispatch(cancelProduct(product))
+    }
 
     return(
         <div className="orderpage-main">
@@ -17,11 +25,11 @@ export const OrderStatus = (props : {products : ProductsData []}) =>{
                             <section className="orderpage-details-container">
                             <img src={item.image} alt="" />
                             <h1>{item.title}</h1>
-                            <h1 className="status">Status : Order Placed</h1>
+                            <h1 className={item.cancelled ? "cancelled" : "placed"}>Status : Order {item.cancelled ?  "Cancelled" : "Place"}</h1>
                             <h1>Deliver : {`${new Date().getDate() + 3}-Mon-2025 `}</h1>
                             </section>
                             <section className="orderpage-btn-collection">
-                            <button className="cancel">Cancel Order</button>
+                            <button className="cancel" onClick={() => {cancel(item)}}>Cancel Order</button>
                             <button className="track">Track</button>
                             </section>
 

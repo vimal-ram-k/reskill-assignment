@@ -12,3 +12,7 @@ export type ProductsData = {
     },
     category : string,
 }
+
+export type orderedItems = ProductsData & {
+    cancelled : boolean
+}
