@@ -67,16 +67,16 @@
 
 }
 
-@media screen and (min-width : 768px) {
+@media screen and (min-width :1024px) {
 
 
   
     .orderpage-details-container{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 2fr 2fr 2.5fr 0.5fr;
         align-items: center;
         font-size: 0.6rem;
-
+        gap: 20px;
    
     
     }
