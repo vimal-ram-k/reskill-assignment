@@ -1,5 +1,6 @@
-import {  Outlet, useLocation } from "react-router-dom"
 import { NavigationBar } from "../UI/navigationbar"
+import { Spinner } from "../components/spinner";
+import {  Outlet, useLocation } from "react-router-dom"
 import { lazy, Suspense, useEffect, useState } from "react";
 import { ProductsData } from "../types/productTypes";
 import axios from "axios";
@@ -44,7 +45,7 @@ setSearchKey(text)
         <NavigationBar onCallback={addSearchKey} />
         {
             showProductList && 
-            <Suspense fallback={<h1>Loading</h1>}>
+            <Suspense fallback={<Spinner />}>
         <ProductList products={products} searchKey ={searchKey} />
             </Suspense>
 

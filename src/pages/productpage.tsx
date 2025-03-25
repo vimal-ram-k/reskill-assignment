@@ -7,6 +7,7 @@ import { addItemToCard } from "../redux/cartSlice/cartSlice";
 import { ProductCountRemeinder } from "../components/productCountRemainder";
 const ProductList = lazy(() => import('../components/productlist'))
 import { lazy, Suspense, useEffect } from "react";
+import { Spinner } from "../components/spinner";
 export const ProductPage = () =>{
     const location = useNavigate();
 
@@ -59,7 +60,7 @@ export const ProductPage = () =>{
             <button className="cart-add-btn" onClick={addItem}>Add to Cart</button>
             </div>
         </div>
-             <Suspense fallback={<h1>Loading</h1>}>
+             <Suspense fallback={<Spinner />}>
         <ProductList products={same_category_products} searchKey="" />
              </Suspense>
         </div>
