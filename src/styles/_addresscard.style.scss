@@ -15,10 +15,8 @@
     gap: 10px;
     font-family: "Poppins";
 
-
-    .header{
+    .header {
         font-size: 2rem;
-       
     }
 
     input {
@@ -28,28 +26,23 @@
         font-size: 1rem;
         color: green;
         font-family: "Poppins";
-        &:focus{
+        &:focus {
             border: 1px solid green;
         }
     }
 
-    button{
+    button {
         font-family: "Poppins";
         padding: 10px 20px;
-        background-color: green ;
+        background-color: green;
         color: white;
         border-radius: 10px;
         border: none;
 
-        &:hover{
+        &:hover {
             transform: scale(1.2);
             transition: all 2s linear;
         }
-    }
-
-    
-
-    .header {
     }
 }
 
