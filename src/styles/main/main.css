@@ -525,7 +525,8 @@ a:hover {
 
 .btn-myorder {
   padding: 10px 20px;
-  background-color: orange;
+  background-color: rgba(255, 0, 68, 0.744);
+  font-family: "Poppins";
   color: white;
   border: none;
   border-radius: 20px;
