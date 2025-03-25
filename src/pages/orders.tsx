@@ -1,8 +1,7 @@
 import { useSelector } from "react-redux"
 import { Rootstate } from "../redux/store"
 import { OrderStatus } from "../components/orderStatus";
-import { useEffect, useState } from "react";
-import { OrderConfirmation } from "../components/orderconfimation";
+import { useEffect } from "react";
 
 
 export const OrderPage = () =>{

@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../redux/store";
 import { addItemToCard } from "../redux/cartSlice/cartSlice";
 import { ProductCountRemeinder } from "../components/productCountRemainder";
-import { ProductList } from "../components/productlist";
-import { useEffect } from "react";
+const ProductList = lazy(() => import('../components/productlist'))
+import { lazy, Suspense, useEffect } from "react";
 export const ProductPage = () =>{
     const location = useNavigate();
 
@@ -59,7 +59,9 @@ export const ProductPage = () =>{
             <button className="cart-add-btn" onClick={addItem}>Add to Cart</button>
             </div>
         </div>
+             <Suspense fallback={<h1>Loading</h1>}>
         <ProductList products={same_category_products} searchKey="" />
+             </Suspense>
         </div>
     )
 }

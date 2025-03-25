@@ -20,3 +20,5 @@ export const ProductList = (props : { products : ProductsData [] , searchKey : s
 
     )
 }
+
+export default ProductList

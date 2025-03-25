@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { ProductsData } from "../types/productTypes"
 import { AppDispatch, Rootstate } from "../redux/store";
-import { useNavigate } from "react-router-dom";
 import { placeOrder } from "../redux/cartSlice/cartSlice";
 
 
@@ -11,7 +10,6 @@ export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : ()
     const total_price = Math.round(products.reduce((sum , item) => sum + (item.price * item.count) ,0))
     const discount = Math.floor(total_price % 10);
     const address = useSelector((state :Rootstate) => state.address.address.name)
-const location = useNavigate();
 
     const dispatch : AppDispatch = useDispatch();
 

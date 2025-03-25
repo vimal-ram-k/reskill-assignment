@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom"
 import logo from '../assets/logo.svg';
-import person from '../assets/person.png';
 import searchicon from '../assets/search-icon.png';
 import cart from '../assets/cart.png';
 import { ChangeEvent, useEffect, useState } from "react";
