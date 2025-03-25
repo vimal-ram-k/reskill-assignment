@@ -25,7 +25,7 @@ export const OrderStatus = (props : {products : orderedItems []}) =>{
                             <section className="orderpage-details-container">
                             <img src={item.image} alt="" />
                             <h1>{item.title}</h1>
-                            <h1 className={item.cancelled ? "cancelled" : "placed"}>Status : Order {item.cancelled ?  "Cancelled" : "Place"}</h1>
+                            <h1 className={item.cancelled ? "cancelled" : "placed"}>Status : Order {item.cancelled ?  "Cancelled" : "Placed"}</h1>
                             <h1>Deliver : {`${new Date().getDate() + 3}-Mon-2025 `}</h1>
                             </section>
                             <section className="orderpage-btn-collection">
