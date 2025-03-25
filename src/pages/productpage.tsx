@@ -1,4 +1,5 @@
 import { Link, useNavigate, useParams } from "react-router-dom"
+import { lazy, Suspense, useEffect } from "react";
 
 import { Rootstate } from "../redux/store";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,7 +7,6 @@ import { AppDispatch } from "../redux/store";
 import { addItemToCard } from "../redux/cartSlice/cartSlice";
 import { ProductCountRemeinder } from "../components/productCountRemainder";
 const ProductList = lazy(() => import('../components/productlist'))
-import { lazy, Suspense, useEffect } from "react";
 import { Spinner } from "../components/spinner";
 export const ProductPage = () =>{
     const location = useNavigate();
