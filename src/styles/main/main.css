@@ -513,16 +513,27 @@
   }
 }
 .offer-banner {
+  width: 90vw;
+  height: 200px;
+}
+
+.banner {
   width: 100vw;
   height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: sticky;
   top: 50px;
   z-index: -1000;
 }
 
 @media screen and (min-width: 568px) {
-  .offer-banner {
+  .banner {
     height: 500px;
+  }
+  .offer-banner {
+    height: 450px;
   }
 }
 body {
