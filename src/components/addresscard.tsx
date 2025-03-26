@@ -48,7 +48,7 @@ export const AddressCard  = (props : { closeModule : () => void }) =>{
             <label htmlFor=""><input type="text" onChange={handleData} placeholder="S/o" name="fathername" value={address.fathername}/></label>
             <label htmlFor=""><input type="text" onChange={handleData} placeholder="area" name="area" value={address.area}/></label> 
             <label htmlFor=""><input type="text" onChange={handleData} placeholder="pincode" name="pincode" value={address.pincode}/></label>
-            <button className='' onClick={saveAddress}>Done</button>
+            <button className='' onTouchStart={saveAddress} onClick={saveAddress}>Done</button>
         </form>
     )
 }

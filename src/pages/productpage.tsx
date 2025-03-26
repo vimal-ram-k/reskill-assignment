@@ -57,7 +57,7 @@ export const ProductPage = () =>{
                 <ProductCountRemeinder id={product.id} />
                 <h1 className="cart-product-desc">{product.description}</h1>
                 <h1>$ {product.price}</h1>
-            <button className="cart-add-btn" onClick={addItem}>Add to Cart</button>
+            <button className="cart-add-btn" onTouchStart={addItem} onClick={addItem}>Add to Cart</button>
             </div>
         </div>
              <Suspense fallback={<Spinner />}>

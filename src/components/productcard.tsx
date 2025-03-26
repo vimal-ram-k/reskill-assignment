@@ -41,7 +41,7 @@ export const ProductCard = (props: { products: ProductsData[] , totalPrice : boo
             </Link>
         
         <div className="product-card-footer"> 
-        <button className="cart-add-btn" onClick={() => addItemtoCart(item)}>Add to Cart</button>
+        <button className="cart-add-btn" onTouchStart={() => addItemtoCart(item)} onClick={() => addItemtoCart(item)}>Add to Cart</button>
             {
                 item.id % 3 === 1 || item.id % 3 === 2 &&
                 <ProductCountRemeinder id={item.id} />

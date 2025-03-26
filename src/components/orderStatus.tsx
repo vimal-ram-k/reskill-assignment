@@ -29,7 +29,7 @@ export const OrderStatus = (props : {products : orderedItems []}) =>{
                             <h1>deliver on time : {`${new Date().getDate() + 3}-Mon-2025 `}</h1>
                             </section>
                             <section className="orderpage-btn-collection">
-                            <button className="cancel" onClick={() => {cancel(item)}}>Cancel Order</button>
+                            <button className="cancel" onTouchStart={() =>{cancel(item)}} onClick={() => {cancel(item)}}>Cancel Order</button>
                             <button className="track">Track</button>
                             </section>
 

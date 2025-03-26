@@ -21,7 +21,7 @@ export const AddOrRemoveCartProduct = (props : {item : ProductsData , btn: "remo
 
     return(
     <div>
-      <button onClick={callback} className="btn-cart-ra">{icon}</button>
+      <button onTouchStart={callback} onClick={callback} className="btn-cart-ra">{icon}</button>
     </div>
     )
 

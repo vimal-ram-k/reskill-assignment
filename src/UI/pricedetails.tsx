@@ -57,7 +57,7 @@ export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : ()
             <h1>Total Amount</h1>
             <h1>$ {total_price  - discount }</h1>
         </li>
-        <button className="place-order-btn" onClick={chechAddress}>PLACE ORDER</button>
+        <button className="place-order-btn" onTouchStart={chechAddress} onClick={chechAddress}>PLACE ORDER</button>
         </ul>
 
 <Link to="/">

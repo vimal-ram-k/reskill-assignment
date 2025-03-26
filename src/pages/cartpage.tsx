@@ -43,7 +43,7 @@ export const CartPage = () =>{
 
             <section className="cart-header">
                 <h1>From Saved Address</h1>
-                <button className="cart-btn" onClick={handleShowAddressCard}>Enter Delivery Address</button>
+                <button className="cart-btn" onTouchStart={handleShowAddressCard} onClick={handleShowAddressCard}>Enter Delivery Address</button>
             </section>
             <ShippingAddressDetails  />
             <PaymentMethod />
