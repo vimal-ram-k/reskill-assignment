@@ -11,6 +11,8 @@ export const ProductList = (props : { products : ProductsData [] , searchKey : s
         product.title.toLowerCase().includes(props.searchKey.toLowerCase()) 
     );
 
+ 
+
     return(
         <>
         <ul className="product-container">

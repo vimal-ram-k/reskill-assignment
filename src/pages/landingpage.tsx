@@ -52,12 +52,17 @@ setSearchKey(text)
 
     const [showProductList , setShowProductList] = useState(true);
     useEffect(() => {
-        if(location.pathname ==="/"){
-        window.scrollTo(0, 100)
-        }
+      
         setShowProductList(location.pathname === "/");
         setSearchKey("")
-    },[]);
+    });
+
+    useEffect(() =>{
+       if(location.pathname === "/"){
+        window.scrollTo(0,50)
+       }
+    })
+  
 
     return(
         <>
