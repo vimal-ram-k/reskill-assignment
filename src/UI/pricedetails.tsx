@@ -52,7 +52,7 @@ export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : ()
             <h1>Delivery Charges</h1>
                 <h1 className="delivery-charge"><del className="">$40</del>Free</h1> 
         </li>
-        <li>
+        <li className="total-amount-section">
             <h1>Total Amount</h1>
             <h1>$ {total_price  - discount }</h1>
         </li>

@@ -7,12 +7,12 @@
 
 .cart-price-details{
 
-
-
-    background-color: rgba(128, 128, 128, 0.084);
+    font-family: "Poppins";
+    background-color: rgba(239, 239, 239, 0.821);
     padding: 10px 20px;
     font-size: 0.6rem;
     font-weight: 400;
+    border: 1px solid black;
 
     ul{
         padding: 0%;
@@ -31,12 +31,18 @@
         color: gray;
     }
 
+    .total-amount-section{
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
     .place-order-btn{
-        padding: 15px 10px;
-        background-color: rgb(198, 91, 52);
+        padding: 15px 15px;
+        background-color: rgb(236, 145, 8);
         color: white;
         border: none;
         margin-top: 20px;
+        font-family: "Poppins";
         border-radius: 10px;
     }
 

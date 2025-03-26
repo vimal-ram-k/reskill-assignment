@@ -19,7 +19,7 @@
   border: none;
   background-color: transparent;
   font-size: 1rem;
-  color: green;
+  color: black;
 }
 
 .no-item-cart {
@@ -30,7 +30,9 @@
 }
 
 .back-btn:hover {
-  transform: scale(1.2);
+  transition: all 0.5s linear;
+  transform: scale(1.05);
+  color: orange;
 }
 
 .back-btn::before {
@@ -277,10 +279,12 @@
 }
 
 .cart-price-details {
-  background-color: rgba(128, 128, 128, 0.084);
+  font-family: "Poppins";
+  background-color: rgba(239, 239, 239, 0.821);
   padding: 10px 20px;
   font-size: 0.6rem;
   font-weight: 400;
+  border: 1px solid black;
 }
 .cart-price-details ul {
   padding: 0%;
@@ -295,12 +299,17 @@
 .cart-price-details span {
   color: gray;
 }
+.cart-price-details .total-amount-section {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
 .cart-price-details .place-order-btn {
-  padding: 15px 10px;
-  background-color: rgb(198, 91, 52);
+  padding: 15px 15px;
+  background-color: rgb(236, 145, 8);
   color: white;
   border: none;
   margin-top: 20px;
+  font-family: "Poppins";
   border-radius: 10px;
 }
 
@@ -320,7 +329,7 @@
   border-radius: 10px;
   width: 70dvw;
   gap: 10px;
-  font-family: "Poppins";
+  font-family: "Poppins" !important;
 }
 .address-card .header {
   font-size: 2rem;
@@ -372,6 +381,7 @@
 
 .orderpage-main {
   padding: max(30px, 1%);
+  font-family: "Poppins";
 }
 
 .placed {
@@ -403,6 +413,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: end;
   gap: 30px;
 }
 .orderpage-container .orderpage-btn-collection button {
@@ -446,6 +457,7 @@
 .payment-container {
   border: 1px solid black;
   padding: 0px 20px 20px;
+  font-family: "Poppins";
 }
 .payment-container h1 {
   font-size: 1rem;
