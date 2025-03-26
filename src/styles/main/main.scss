@@ -80,11 +80,10 @@ a:hover {
 
 .btn-myorder{
   padding: 10px 20px;
-  background-color: black;
   font-family: "Poppins";
-  color: white;
+  color: black;
   border: none;
-  border-radius: 20px;
+  border-radius: 5px;
 
   &:hover{
     transition: all 0.5s linear;
@@ -103,6 +102,7 @@ a:hover {
 
 .right-container {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 

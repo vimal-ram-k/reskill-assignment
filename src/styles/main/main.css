@@ -154,6 +154,11 @@
   font-size: 0.8rem;
 }
 
+.btn-cart-ra {
+  border: none;
+  font-size: 1rem;
+}
+
 .btn-cart-ra:hover {
   cursor: pointer;
   transform: scale(1.1);
@@ -176,7 +181,8 @@
 }
 
 .cart-product-card-grid {
-  font-size: 0.7rem;
+  font-size: 0.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   padding: 20px 30px;
 }
 
@@ -427,7 +433,8 @@
 
 .orderpage-main {
   padding: max(30px, 1%);
-  font-family: "Poppins";
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgba(128, 128, 128, 0.075);
 }
 
 .placed {
@@ -444,10 +451,13 @@
   margin: 0;
 }
 .orderpage-container .orderpage-section {
+  max-width: 900px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
   display: grid;
   grid-template-columns: 3fr 2fr;
   align-items: center;
-  border: 1px solid black;
   padding: 10px 20px;
   font-size: 0.5rem;
 }
@@ -483,7 +493,7 @@
 @media screen and (min-width: 1024px) {
   .orderpage-details-container {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2.5fr 0.5fr;
+    grid-template-columns: 1fr 3fr 2fr 2.5fr 0.5fr;
     align-items: center;
     font-size: 0.6rem;
     gap: 20px;
@@ -634,11 +644,10 @@ a:hover {
 
 .btn-myorder {
   padding: 10px 20px;
-  background-color: black;
   font-family: "Poppins";
-  color: white;
+  color: black;
   border: none;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 .btn-myorder:hover {
   transition: all 0.5s linear;
@@ -656,6 +665,7 @@ a:hover {
 
 .right-container {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 

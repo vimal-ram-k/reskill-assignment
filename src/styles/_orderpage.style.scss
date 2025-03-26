@@ -2,7 +2,8 @@
 
 .orderpage-main{
     padding: max(30px , 1%);
-    font-family: "Poppins";
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    background-color: rgba(128, 128, 128, 0.075);
 }
 
 .placed{
@@ -17,10 +18,13 @@
         padding: 0%;
         margin: 0;
     .orderpage-section{
+        max-width: 900px;
+        background-color: white;
+        margin: 10px;
+        border-radius: 10px;
         display: grid;
         grid-template-columns: 3fr 2fr;
         align-items: center;
-       border:1px solid black;
        padding: 10px 20px; 
         font-size: 0.5rem;
     }
@@ -75,7 +79,7 @@
   
     .orderpage-details-container{
         display: grid;
-        grid-template-columns: 1fr 2fr 2fr 2.5fr 0.5fr;
+        grid-template-columns: 1fr 3fr 2fr 2.5fr 0.5fr;
         align-items: center;
         font-size: 0.6rem;
         gap: 20px;
