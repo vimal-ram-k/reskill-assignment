@@ -4,18 +4,21 @@
     display: flex;
     padding: 5px 10px;
     border-radius: 5px;
-    width: 120px;
+    width: 140px;
+    border-radius: 50px;
     border: 1px solid black;
     transition: all 1s linear;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.185);
 }
 
 
 
 .searchbar{
+    padding: 0 10px;
     font-size: 1rem;
+    color: white;
     &:placeholder-shown{
-        color: black;
+        color: white;
     }
 }
 
@@ -23,7 +26,7 @@
 @media screen and (min-width : 568px) {
 
     .search-bar{
-        width: 200px;
+        width: 30dvw;
     }
 }
 

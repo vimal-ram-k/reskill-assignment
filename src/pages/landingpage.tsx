@@ -57,7 +57,7 @@ setSearchKey(text)
         }
         setShowProductList(location.pathname === "/");
         setSearchKey("")
-    });
+    },[]);
 
     return(
         <>

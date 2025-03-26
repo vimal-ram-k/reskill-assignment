@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom"
 import logo from '../assets/logo.svg';
-import searchicon from '../assets/search-icon.png';
+import searchicon from '../assets/icons8-search.svg';
 import cart from '../assets/cart.png';
 import { ChangeEvent, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -24,24 +24,27 @@ export const NavigationBar = (props : {onCallback : (text : string) => void}) =>
         <div className="navigationbar">
             <Link to={"/"} className="logo"> 
             <img src={logo} alt="" width={30} height={30} />
-            <h1>ShopCart</h1>
+            <h1 className="company-name">ShopCart</h1>
             </Link>
 
-            <section className="right-container">
-                <div className="search-section">
-           {
+
+            {
             showSearchbar && 
             <div className="search-bar">
             <img src={searchicon} className="searchicon" alt="" width={25} height={25} />
             <input type="text" autoFocus placeholder="Search" className="searchbar" onChange={(e : ChangeEvent<HTMLInputElement>) => props.onCallback(e.target.value)} />
             </div>
            }
+
+            <section className="right-container">
+                <div className="search-section">
+       
                 </div>
 
 
                 
-                <Link to="/order">
-                <button className="btn-myorder">Orders</button>
+                <Link to="/order" className="btn-myorder">
+              Orders
                 </Link>
                 <Link to={"/cart"}>
                 <div className=" cart-badge">

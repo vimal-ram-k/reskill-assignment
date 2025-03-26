@@ -41,8 +41,8 @@ a:hover {
   gap: 10px;
   text-decoration: none;
   color: #ffffff;
-  font-size: 0.3rem;
-  font-family: "Boldonse", system-ui;
+  font-family: "Poppins";
+  font-size: 0.5rem;
   font-weight: 400;
   font-style: normal;
 
@@ -65,6 +65,10 @@ a:hover {
   border: none;
 }
 
+.company-name{
+  display: none;
+}
+
 .navigationbar {
   display: flex;
   align-items: center;
@@ -74,14 +78,14 @@ a:hover {
   border-bottom: 0.5px solid rgba(128, 128, 128, 0.351);
   position: sticky;
   top: 0px;
-  background-color: rgb(0, 0, 0);
+  background: #000000;
   z-index: 1000;
 }
 
 .btn-myorder{
   padding: 10px 20px;
   font-family: "Poppins";
-  color: black;
+  color: white;
   border: none;
   border-radius: 5px;
 
@@ -168,6 +172,10 @@ li {
 @media screen and (min-width : 568px) {
   .logo{
     font-size: 0.6rem;
+  }
+
+  .company-name{
+    display: flex;
   }
 }
 
