@@ -43,6 +43,10 @@ export const LandingPage = () => {
     },[])
 
 
+    useEffect(() =>{
+        window.scrollTo(0, 100)
+    })
+
 
     function addSearchKey (text : string){
 setSearchKey(text)
@@ -53,6 +57,7 @@ setSearchKey(text)
     const [showProductList , setShowProductList] = useState(true);
     useEffect(() => {
         setShowProductList(location.pathname === "/");
+        setSearchKey("")
     }, [location.pathname]);
 
     return(
