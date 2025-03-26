@@ -5,14 +5,31 @@
     border-bottom: 1px solid black;
 }
 
+
+@keyframes bannerBlur {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .cart-price-details{
 
-    font-family: "Poppins";
-    background-color: rgba(239, 239, 239, 0.821);
+
+    .cartpage-offer-banner{
+        width: 100%;
+        margin-top: 30px;
+        animation: bannerBlur 2s infinite linear;
+    }
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
     padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
     font-size: 0.6rem;
     font-weight: 400;
-    border: 1px solid black;
 
     ul{
         padding: 0%;

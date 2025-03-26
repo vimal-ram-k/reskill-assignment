@@ -139,7 +139,9 @@
   justify-content: center;
   align-items: center;
   font-size: 0.8rem;
-  border: 1px solid black;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
   padding: 10px 40px;
   text-align: center;
 }
@@ -184,6 +186,7 @@
 }
 
 .cart-container {
+  background-color: rgba(128, 128, 128, 0.075);
   display: grid;
   grid-template-columns: 1fr;
   padding: min(3dvw, 100px);
@@ -244,6 +247,9 @@
   border-radius: 20px;
   font-family: "Poppins";
 }
+.order-confr-container .order-confirm-ani {
+  width: 200px;
+}
 .order-confr-container .header {
   color: green;
 }
@@ -274,7 +280,7 @@
   margin-top: 50px;
   max-width: 150px;
   padding: 10px 20px;
-  background-color: orange;
+  background-color: black;
   color: white;
   font-size: 1.2rem;
   border: none;
@@ -286,19 +292,36 @@
     width: 50dvw;
     height: 60dvh;
   }
+  .order-confr-container .order-confirm-ani {
+    width: 300px;
+  }
 }
 .price-container-header {
   padding: 5px 0px;
   border-bottom: 1px solid black;
 }
 
+@keyframes bannerBlur {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .cart-price-details {
-  font-family: "Poppins";
-  background-color: rgba(239, 239, 239, 0.821);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: white;
   padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
   font-size: 0.6rem;
   font-weight: 400;
-  border: 1px solid black;
+}
+.cart-price-details .cartpage-offer-banner {
+  width: 100%;
+  margin-top: 30px;
+  animation: bannerBlur 2s infinite linear;
 }
 .cart-price-details ul {
   padding: 0%;
@@ -378,7 +401,9 @@
   }
 }
 .shipping-address-card {
-  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
   padding: 10px 30px;
   font-family: "Poppins";
 }
@@ -476,8 +501,10 @@
   }
 }
 .payment-container {
-  border: 1px solid black;
-  padding: 0px 20px 20px;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
   font-family: "Poppins";
 }
 .payment-container h1 {

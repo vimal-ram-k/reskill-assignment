@@ -2,7 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { ProductsData } from "../types/productTypes"
 import { AppDispatch, Rootstate } from "../redux/store";
 import { placeOrder } from "../redux/cartSlice/cartSlice";
-
+import offer from '../assets/5646795.jpg'
+import { Link } from "react-router-dom";
 
 export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : () => void }) =>{
 
@@ -46,7 +47,7 @@ export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : ()
         </li>
         <li className="">
             <h1>Discount</h1>
-            <h1>${discount}</h1>
+            <h1>- ${discount}</h1>
         </li>
         <li className="">
             <h1>Delivery Charges</h1>
@@ -59,7 +60,9 @@ export const PriceDetails = (props : {itemId : ProductsData [] , onCallback : ()
         <button className="place-order-btn" onClick={chechAddress}>PLACE ORDER</button>
         </ul>
 
-
+<Link to="/">
+<img src={offer} alt="" className="cartpage-offer-banner" />
+</Link>
     </section>
     )
 }

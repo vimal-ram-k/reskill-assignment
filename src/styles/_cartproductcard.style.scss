@@ -7,7 +7,9 @@
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
-    border : 1px solid black;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
     padding: 10px 40px;
     text-align: center;
   
@@ -54,6 +56,7 @@
 }
 
 .cart-container{
+    background-color: rgba(128, 128, 128, 0.075);
     display: grid;
     grid-template-columns: 1fr;
     padding: min(3dvw , 100px);
