@@ -93,7 +93,7 @@
 .search-bar {
   display: flex;
   padding: 5px 10px;
-  border-radius: 20px;
+  border-radius: 5px;
   width: 120px;
   border: 1px solid black;
   transition: all 1s linear;
