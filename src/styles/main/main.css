@@ -24,6 +24,7 @@
 
 .no-item-cart {
   font-size: 0.8rem;
+  font-family: "Poppins";
   border: 1px solid black;
   height: 50px;
   padding: 10px 40px;
@@ -157,6 +158,8 @@
 
 .cart-header {
   display: flex;
+  font-family: "Poppins";
+  font-size: 0.9rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -240,8 +243,15 @@
 .order-confr-container .header {
   color: green;
 }
+.order-confr-container .address-section h1 {
+  font-size: 0.3rem;
+}
 .order-confr-container .shipping-address-card {
   width: 300px;
+  font-family: "Poppins" !important;
+}
+.order-confr-container .shipping-address-card .header {
+  font-size: 1rem;
 }
 
 .shipping-address-card h1[class~=comma]::after {
@@ -305,7 +315,7 @@
 }
 .cart-price-details .place-order-btn {
   padding: 15px 15px;
-  background-color: rgb(236, 145, 8);
+  background-color: #0c9c78;
   color: white;
   border: none;
   margin-top: 20px;
@@ -366,9 +376,16 @@
 .shipping-address-card {
   border: 1px solid black;
   padding: 10px 30px;
+  font-family: "Poppins";
 }
 .shipping-address-card .header {
-  font-size: 0.8rem;
+  font-size: 1rem;
+}
+.shipping-address-card ul {
+  padding: 0px 40px;
+}
+.shipping-address-card ul li {
+  font-size: 0.4rem;
 }
 .shipping-address-card address h1 {
   font-size: 0.8rem;

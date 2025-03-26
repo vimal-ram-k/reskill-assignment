@@ -14,6 +14,7 @@
 .cart-product-card{
     display: grid;
     grid-template-columns: 1fr 1fr;
+
 }
 
 .back-btn{
@@ -25,6 +26,7 @@
 }
 .no-item-cart{
     font-size: 0.8rem;
+    font-family: "Poppins";
     border: 1px solid black;
     height: 50px;
     padding: 10px 40px;

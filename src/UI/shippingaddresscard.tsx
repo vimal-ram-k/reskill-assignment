@@ -12,17 +12,30 @@ export const ShippingAddressDetails = () =>{
         <div className=" shipping-address-card">
             {
                    isAddressEmpty ?
-                         <h1 className="alert">Please Enter your Address Details</h1>
+                         <h1 className="">Please Enter your Address Details</h1>
                     
                 
             :
             <>
             <h1 className="header">Shipping Details : </h1>
-            <address className="">
-                <h1 className="name comma">{address.name}</h1>
+            <ul className="address-section">
+                <li>
+            <h1 className="name comma">{address.name}</h1>
+
+                </li>
+                <li>
                 <h1 className="fathername comma">{address.fathername}</h1>
+                </li>
+                <li>
                 <h1 className="comma">{address.area}</h1>
+
+                </li>
+                <li>
                 <h1>{address.pincode}</h1>
+
+                </li>
+            </ul>
+            <address className="">
             </address>
             </>
 }
