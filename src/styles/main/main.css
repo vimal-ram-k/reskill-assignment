@@ -91,15 +91,19 @@
   display: flex;
   padding: 5px 10px;
   border-radius: 20px;
-  opacity: 0.5;
   width: 120px;
-  border: 0.5px solid green;
+  border: 1px solid black;
   transition: all 1s linear;
 }
 
 .searchbar {
-  color: green;
   font-size: 1rem;
+}
+.searchbar:-moz-placeholder-shown {
+  color: black;
+}
+.searchbar:placeholder-shown {
+  color: black;
 }
 
 @media screen and (min-width: 568px) {
@@ -503,7 +507,7 @@ a:hover {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: #000;
+  color: #0c9c78;
   font-size: 0.3rem;
   font-family: "Boldonse", system-ui;
   font-weight: 400;
@@ -528,7 +532,7 @@ a:hover {
 
 .btn-myorder {
   padding: 10px 20px;
-  background-color: rgba(255, 0, 68, 0.744);
+  background-color: black;
   font-family: "Poppins";
   color: white;
   border: none;

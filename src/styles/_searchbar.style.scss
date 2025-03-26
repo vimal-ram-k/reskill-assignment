@@ -4,15 +4,20 @@
     display: flex;
     padding: 5px 10px;
     border-radius: 20px;
-    opacity: 0.5;
     width: 120px;
-    border: 0.5px solid green;
+    border: 1px solid black;
     transition: all 1s linear;
+
+   
 }
 
+
+
 .searchbar{
-    color: green;
     font-size: 1rem;
+    &:placeholder-shown{
+        color: black;
+    }
 }
 
 
