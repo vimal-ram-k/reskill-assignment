@@ -7,6 +7,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addProducts } from "../redux/productsSlice/productSlice";
 import { AppDispatch } from "../redux/store";
+import { OfferBanner } from "../components/offerbanner";
 
 const ProductList = lazy(() => import('../components/productlist'))
 export const LandingPage = () => {
@@ -46,6 +47,7 @@ setSearchKey(text)
         {
             showProductList && 
             <Suspense fallback={<Spinner />}>
+                <OfferBanner />
         <ProductList products={products} searchKey ={searchKey} />
             </Suspense>
 

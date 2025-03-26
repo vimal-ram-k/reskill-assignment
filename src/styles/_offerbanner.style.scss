@@ -1,0 +1,16 @@
+
+
+.offer-banner{
+    width: 100dvw;
+    height: 250px;
+    position: sticky;
+    top: 50px;
+    z-index: -1000;
+}
+
+@media screen and (min-width : 568px) {
+    .offer-banner{
+    height: 500px;
+
+    }
+}
