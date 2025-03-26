@@ -32,6 +32,7 @@ export const ProductPage = () =>{
 
     function addItem (){
         if(product){
+            if(Notification.permission === "granted"){
 
             const notification =  new Notification("Added new product to cart" , {
                 body : product.title,
@@ -41,6 +42,7 @@ export const ProductPage = () =>{
             notification.addEventListener("click" , () =>{
                 location(`/cart`)
             } )
+        }
             dispatch(addItemToCard(product))
         }
     }

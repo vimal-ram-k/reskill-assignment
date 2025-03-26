@@ -14,16 +14,20 @@ export const ProductCard = (props: { products: ProductsData[] , totalPrice : boo
 
     function addItemtoCart (product : ProductsData){
 
-     
-       const notification =  new Notification("Added new product to cart" , {
-            body : product.title,
-            icon : product.image
-        })
+        if(Notification.permission === "granted"){
+
+            
+            const notification =  new Notification("Added new product to cart" , {
+                body : product.title,
+                icon : product.image
+            })
+            notification.addEventListener("click" , () =>{
+                location(`/cart`)
+            } )
+        }
         dispatch(addItemToCard(product))
 
-        notification.addEventListener("click" , () =>{
-            location(`/cart`)
-        } )
+     
     }
     return (
 
