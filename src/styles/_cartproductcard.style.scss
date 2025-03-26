@@ -74,6 +74,13 @@
     font-size: 0.9rem;
 }
 
+@media screen and (min-width : 990px) {
+    .cart-container{
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+}
+
 
 @media screen and (min-width : 768px) {
     
@@ -86,8 +93,5 @@
 
     }
 
-    .cart-container{
-        grid-template-columns: 3fr 1fr;
-        gap: 20px;
-    }
+ 
 }

@@ -19,6 +19,7 @@ export const CartPage = () =>{
 
 
     function handleShowOrderCOnfirmation () {
+        window.scrollTo(0,0)
         setShowOrderCinfirmation(prev => !prev)
     }
     const itemsId = useSelector((state : Rootstate) => {
