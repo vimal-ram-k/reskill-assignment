@@ -21,7 +21,7 @@ export const NavigationBar = (props : {onCallback : (text : string) => void}) =>
     const products = useSelector((state : Rootstate) => state.cart.addedItemsId)
 
     return(
-        <div className="navigationbar">
+        <div className="navigationbar" data-testid="test-navbar">
             <Link to={"/"} className="logo"> 
             <img src={logo} alt="" width={30} height={30} />
             <h1>ShopCart</h1>
@@ -33,7 +33,7 @@ export const NavigationBar = (props : {onCallback : (text : string) => void}) =>
             showSearchbar && 
             <div className="search-bar">
             <img src={searchicon} className="searchicon" alt="" width={25} height={25} />
-            <input type="text" autoFocus placeholder="Search" className="searchbar" onChange={(e : ChangeEvent<HTMLInputElement>) => props.onCallback(e.target.value)} />
+            <input type="text" data-testid="test-searchbar" autoFocus placeholder="Search" className="searchbar" onChange={(e : ChangeEvent<HTMLInputElement>) => props.onCallback(e.target.value)} />
             </div>
            }
                 </div>
