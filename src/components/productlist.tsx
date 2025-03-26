@@ -2,7 +2,6 @@
 import { ProductCard } from "./productcard";
 
 import { ProductsData } from "../types/productTypes";
-import { OfferBanner } from "./offerbanner";
 
 
 
