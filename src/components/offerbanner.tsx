@@ -1,4 +1,4 @@
-import offerbanner from '../assets/32991694_sl_051121_42790_108.jpg'
+import offerbanner from '../assets/5700556_21235.jpg'
 
 export const OfferBanner = () =>{
 
