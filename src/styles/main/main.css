@@ -26,8 +26,13 @@
 .no-item-cart {
   font-size: 0.8rem;
   font-family: "Poppins";
-  border: 1px solid black;
   height: 50px;
+  background-color: white;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
   padding: 10px 40px;
 }
 
