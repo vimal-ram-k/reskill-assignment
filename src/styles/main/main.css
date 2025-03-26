@@ -19,7 +19,8 @@
   border: none;
   background-color: transparent;
   font-size: 1rem;
-  color: black;
+  color: orange;
+  font-family: "Poppins";
 }
 
 .no-item-cart {
@@ -33,7 +34,6 @@
 .back-btn:hover {
   transition: all 0.5s linear;
   transform: scale(1.05);
-  color: orange;
 }
 
 .back-btn::before {
@@ -185,7 +185,7 @@
 .cart-container {
   display: grid;
   grid-template-columns: 1fr;
-  padding: min(5dvw, 200px);
+  padding: min(3dvw, 100px);
   border: 1px solid black;
 }
 .cart-container ul {
@@ -239,12 +239,13 @@
           backdrop-filter: blur(10px); /* backdrop blur */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.77); /* optional shadow for depth */
   border-radius: 20px;
+  font-family: "Poppins";
 }
 .order-confr-container .header {
   color: green;
 }
 .order-confr-container .address-section h1 {
-  font-size: 0.3rem;
+  font-size: 0.7rem;
 }
 .order-confr-container .shipping-address-card {
   width: 300px;
@@ -512,7 +513,7 @@
   }
 }
 .offer-banner {
-  width: 100dvw;
+  width: 100vw;
   height: 250px;
   position: sticky;
   top: 50px;
@@ -527,6 +528,7 @@
 body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .search-section {

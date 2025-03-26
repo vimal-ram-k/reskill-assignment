@@ -22,7 +22,9 @@
     border:none;
     background-color: transparent;
     font-size: 1rem;
-    color:black;
+    color: orange;
+    font-family: "Poppins";
+
 }
 .no-item-cart{
     font-size: 0.8rem;
@@ -34,7 +36,6 @@
 .back-btn:hover{
     transition: all 0.5s linear;
     transform: scale(1.05);
-    color: orange;
 }
 .back-btn::before{
     content: "<  ";
