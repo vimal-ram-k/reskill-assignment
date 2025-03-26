@@ -48,6 +48,16 @@ a:hover {
 
 }
 
+.search-result-header{
+  display: flex;
+  align-items: center;
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  padding: 0 10px;
+  gap: 10px;
+  color: gray;
+}
+
 .searchbar {
   display: flex;
   background-color: transparent;

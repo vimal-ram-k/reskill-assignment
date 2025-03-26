@@ -7,14 +7,28 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addProducts } from "../redux/productsSlice/productSlice";
 import { AppDispatch } from "../redux/store";
+import spinnergif from '../assets/icons8-spinner.gif'
 import { OfferBanner } from "../components/offerbanner";
 
 const ProductList = lazy(() => import('../components/productlist'))
 export const LandingPage = () => {
 
+
+    const [searchspiner, setSearchSpinner] = useState(true)
+
+ 
     const [products, setProducts] = useState<ProductsData[]>([]);
     const [searchKey, setSearchKey] = useState("");
     const dispatch : AppDispatch = useDispatch();
+
+
+    useEffect(() =>{
+        setTimeout(() =>{
+            setSearchSpinner(false)
+        } ,2000)
+        setSearchSpinner(true)
+    }, [searchKey])
+
 
     useEffect(() =>{
         const fetchProducts = async() =>{
@@ -47,7 +61,11 @@ setSearchKey(text)
         {
             showProductList && 
             <Suspense fallback={<Spinner />}>
-                <OfferBanner />
+               {searchKey.length === 0 &&  <OfferBanner />}
+               {searchKey.length !== 0 && 
+               <div>
+                <h1 className="search-result-header">Search Results {searchspiner && <img src={spinnergif} alt="" />}</h1>
+                </div>}
         <ProductList products={products} searchKey ={searchKey} />
             </Suspense>
 
