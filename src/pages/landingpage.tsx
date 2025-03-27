@@ -27,7 +27,7 @@ export const LandingPage = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const res = await axios.get("https://fakestoreapi.com/products");
+      const res = await axios.get(`${import.meta.env.VITE_ENDPOINT_URL}`);
       const data = await res.data;
       console.log(data);
       setProducts(data);
